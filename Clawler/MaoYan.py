@@ -1,7 +1,7 @@
-from selenium import webdriver
 from selenium.webdriver.common.by import By
-import time
 from Clawler.Driver import webDriver
+from tools.TitleFormatter import find_closest_match
+import time
 
 def get_celebrity_nomination_award_times(cid) -> tuple:
     """ 
@@ -21,4 +21,34 @@ def get_celebrity_nomination_award_times(cid) -> tuple:
 
     return int(award_times), int(nominations_times)
 
-    
+
+def get_movie_id_by_title(title: str) -> str:
+    url = f"https://www.maoyan.com/films"
+    driver = webDriver
+
+    driver.get(url)
+    time.sleep(3)
+
+    # find search input
+    search_input = driver.find_element(By.CLASS_NAME, "search")
+    search_input.send_keys(title)
+    time.sleep(2)
+    # find search button
+    # search_button = driver.find_element(By.CLASS_NAME, "submit")
+    # search_button.click()
+
+    # find movie with class="suggest-detail-list"
+    item = driver.find_element(By.CLASS_NAME, "suggest-detail-list")
+    a_s = item.find_elements(By.TAG_NAME, "a")
+
+    titles = []
+    for a in a_s:
+        titles.append({
+            "href": a.get_attribute("href"),
+            "text": a.text,
+            "id": a.get_attribute("href").split("/")[-1]
+        })
+
+    idx = find_closest_match(title, list(map(lambda x: x["text"], titles)))
+    # print(titles, titles[idx])
+    return titles[idx]["id"]
