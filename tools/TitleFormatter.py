@@ -10,7 +10,7 @@ def find_closest_match(title, titles):
     # remove space and special characters
     title = re.sub(r'[\s+\.\!\/_,$%^*(+\"\']+|[+——！，。？、~@#￥%……&*（）]+', '', title)
     # find the closest match title
-    match_title = difflib.get_close_matches(title, titles, 1, 0.5)
+    match_title = difflib.get_close_matches(title, titles, 1, 0.2)
     if match_title:
         # return index of the closest match title
         return titles.index(match_title[0])
