@@ -4,3 +4,5 @@ data/*.json
 data/authors/*.json
 data/works/*.json
 images
+
+api_keys.py

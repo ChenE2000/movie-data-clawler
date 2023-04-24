@@ -1,7 +1,23 @@
 from selenium.webdriver.common.by import By
 from Clawler.Driver import webDriver
 from tools.TitleFormatter import find_closest_match
+from tools.TencentOCR import ocr
 import time
+
+def get_celebrity_boxoffice(cid) -> float:
+    url = f"https://www.maoyan.com/films/celebrity/{cid}"
+    driver = webDriver
+    driver.get(url)
+    time.sleep(2)
+    # find boxoffice class="cele-index sumBox"
+    p_s = driver.find_elements(By.CLASS_NAME, "stonefont")
+    # p_s 第一个是粉丝数，第二个是总票房
+    # save p_s[1] as base64
+    base_64 = p_s[1].screenshot_as_base64
+    boxoffice = float(ocr(base_64)[0]['DetectedText'])
+    print(boxoffice)
+    return boxoffice
+    
 
 def get_celebrity_nomination_award_times(cid) -> tuple:
     """ 

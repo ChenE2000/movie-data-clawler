@@ -20,7 +20,7 @@ class Celebrity:
         self.nominations_times = None
     
     def clawler_action(self):
-        self.award_times, self.nominations_times =  get_celebrity_nomination_award_times(self.id)
+        self.award_times, self.nominations_times = get_celebrity_nomination_award_times(self.id)
         # TODO clawler other info
 
     def _to_dict(self):
