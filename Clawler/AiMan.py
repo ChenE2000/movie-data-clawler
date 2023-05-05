@@ -176,33 +176,42 @@ def get_movie_id_by_title(title: str) -> str:
     search_button.click()
     time.sleep(10)
 
-    # find movie with class="flex1.left"
-    item = driver.find_element(By.CLASS_NAME, "flex1.left")
-    a_s = item.find_elements(By.TAG_NAME, "img")
-    # print(len(a_s))
-    a_t = item.find_elements(By.TAG_NAME, "h2")
-    # print(len(a_t))
-    titles = []
-    titles.append({
-        "href": a_s[0].get_attribute("data-src"),
-        "text": a_t[0].text,
-        "id": a_s[0].get_attribute("data-src").split("/")[-2]
-    })
-    # idx = find_closest_match(title, list(map(lambda x: x["text"], titles)))
-    # print(titles, titles[idx])
-    return int(titles[0]["id"])
+    try:
+        # find movie with class="flex1.left"
+        item = driver.find_element(By.CLASS_NAME, "flex1.left")
+        a_s = item.find_elements(By.TAG_NAME, "img")
+        # print(len(a_s))
+        a_t = item.find_elements(By.TAG_NAME, "h2")
+        # print(len(a_t))
+        titles = []
+        titles.append({
+            "href": a_s[0].get_attribute("data-src"),
+            "text": a_t[0].text,
+            "id": a_s[0].get_attribute("data-src").split("/")[-2]
+        })
+        return int(titles[0]["id"])
+    except Exception:
+        return None
+
+
+def main_processes(title: str) -> list:
+    id_aiman = get_movie_id_by_title(title)
+    print(id_aiman)
+    if id_aiman is None:
+        Q = [0, 0, 0, 0, 0, title]
+    else:
+        Q = get_actor_sum(id_aiman)
+        Q.append(test[i])
+    print(Q)
+    return Q
 
 
 if __name__ == "__main__":
-    test = ["黄渤", "黄磊"]
+    test = ["123", "黄磊"]
     data = []
     for i in range(len(test)):
-        id_aiman = get_movie_id_by_title(test[i])
-        print(id_aiman)
-        Q = get_actor_sum(id_aiman)
-        Q.append(test[i])
-        print(Q)
+        Q = main_processes(test[i])
         data.append(Q)
-    with open("./aiman.json", "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False)
+    # with open("./aiman.json", "w", encoding="utf-8") as f:
+    #     json.dump(data, f, ensure_ascii=False)
 

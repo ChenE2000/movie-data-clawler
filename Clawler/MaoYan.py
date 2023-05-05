@@ -68,3 +68,28 @@ def get_movie_id_by_title(title: str) -> str:
     idx = find_closest_match(title, list(map(lambda x: x["text"], titles)))
     # print(titles, titles[idx])
     return titles[idx]["id"]
+
+
+# 通过电影名在猫眼专业版爬取电影票房
+def get_profession_films_boxoffice(title: str) -> str:
+    """
+    input films name
+    get films box office
+    return: box office xxx亿
+    """
+    url = f"https://piaofang.maoyan.com/mdb/search?key={title}"
+    driver = webDriver
+    driver.get(url)
+    time.sleep(2)
+    # find nomination times class="box.red"
+    spans = driver.find_elements(By.CLASS_NAME, "box.red")
+    spec = spans[0].text
+    # （共2次获奖，2次提名）
+    spec = spec.replace("票房", "")
+    print(spec)
+
+    return spec
+
+
+if __name__ == "__main__":
+    get_profession_films_boxoffice("万里归途")
