@@ -1,0 +1,18 @@
+version: "3"
+services:
+  spider:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      PYTHONUNBUFFERED: 1
+    volumes:
+      - .:/app
+    command: bash start-spider.sh
+    depends_on:
+      - chrome
+  chrome:
+    image: selenium/standalone-chrome
+    container_name: chrome
+    volumes:
+      - /dev/shm:/dev/shm
