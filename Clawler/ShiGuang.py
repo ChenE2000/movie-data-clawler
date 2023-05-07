@@ -21,7 +21,7 @@ def get_top_10_000_movies():
             "searchType":0,
             "locationId":290,
             "genreTypes":"",
-            "area":"",
+            "area":"中国",
             "year":""
         }, headers=headers).json()
         batch.extend(req["data"]["movies"])
