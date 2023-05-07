@@ -31,9 +31,9 @@ def mtime_actor_favoriteRating(id):
     return json_res
 
 
-# 测试 吴京id = 956786
-res = mtime_actor_favoriteRating(956786)
-print(res)
+# # 测试 吴京id = 956786
+# res = mtime_actor_favoriteRating(956786)
+# print(res)
 
 
 

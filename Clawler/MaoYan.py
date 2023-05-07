@@ -67,7 +67,7 @@ def get_movie_id_by_title(title: str) -> str:
 
     idx = find_closest_match(title, list(map(lambda x: x["text"], titles)))
     # print(titles, titles[idx])
-    return titles[idx]["id"]
+    return int(titles[idx]["id"])
 
 
 # 通过电影名在猫眼专业版爬取电影票房

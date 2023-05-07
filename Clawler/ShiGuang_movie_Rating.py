@@ -40,10 +40,10 @@ def mtime_rating(id):
 
 
 
-# 测试  战狼id = 203613
-id = 203613
-res = mtime_rating(id)
-print(res)
+# # 测试  战狼id = 203613
+# id = 203613
+# res = mtime_rating(id)
+# print(res)
 
 
 

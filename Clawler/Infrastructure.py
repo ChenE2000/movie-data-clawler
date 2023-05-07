@@ -20,5 +20,5 @@ def generate_movie_titles_todo_list() -> typing.List[Movie]:
 
     if len(batch) == 0:
         raise Exception("No movie titles to crawl")
-    
+    print("Total movies to crawl: ", len(batch))
     return batch

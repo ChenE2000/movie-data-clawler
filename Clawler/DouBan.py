@@ -14,7 +14,7 @@ def get_movie_id_by_title(title: str) -> str:
     url = f"https://search.douban.com/movie/subject_search?search_text={title}&cat=1002"
     driver = webDriver
     driver.get(url)
-    time.sleep(2)
+    time.sleep(3)
     # find movie class="item-root"
     items = driver.find_elements(By.CLASS_NAME, "title")
 
@@ -36,7 +36,7 @@ def get_movie_id_by_title(title: str) -> str:
     
     idx = find_closest_match(title, list(map(lambda x: x["text"], titles)))
     # print(titles[idx])
-    return titles[idx]["id"]
+    return int(titles[idx]["id"])
 
 def get_movie_subject_by_id(id) -> BeautifulSoup:
     url = f"https://movie.douban.com/subject/{id}/"

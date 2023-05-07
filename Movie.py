@@ -21,6 +21,7 @@ class Movie:
         }
  
     def save_to_json(self, root_path: str = "./metadata/merged/"):
+        print("save movie: ", self.title, self._to_dict())
         path = root_path + self.title + ".json"
         with open(path, "w", encoding="utf-8") as f:
             json.dump(self._to_dict(), f, ensure_ascii=False)
