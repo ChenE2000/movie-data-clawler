@@ -33,8 +33,10 @@ def get_movie_id_by_title(title: str) -> str:
         except:
             # skip if no <a> tag
             pass
-    
+        
     idx = find_closest_match(title, list(map(lambda x: x["text"], titles)))
+    if len(titles) == 0 or idx is None:
+        return None
     # print(titles[idx])
     return int(titles[idx]["id"])
 

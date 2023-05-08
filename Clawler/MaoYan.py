@@ -54,8 +54,12 @@ def get_movie_id_by_title(title: str) -> str:
     # search_button.click()
 
     # find movie with class="suggest-detail-list"
-    item = driver.find_element(By.CLASS_NAME, "suggest-detail-list")
-    a_s = item.find_elements(By.TAG_NAME, "a")
+    items = driver.find_elements(By.CLASS_NAME, "suggest-detail-list")
+    # a_s = item.find_elements(By.TAG_NAME, "a")
+    a_s = []
+    for item in items:
+        a_ = item.find_elements(By.TAG_NAME, "a")
+        a_s += a_
 
     titles = []
     for a in a_s:
@@ -66,6 +70,8 @@ def get_movie_id_by_title(title: str) -> str:
         })
 
     idx = find_closest_match(title, list(map(lambda x: x["text"], titles)))
+    if idx == None:
+        return None
     # print(titles, titles[idx])
     return int(titles[idx]["id"])
 
