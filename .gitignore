@@ -3,7 +3,7 @@ Clawler/__pycache__
 data/*.json
 data/authors/*.json
 data/works/*.json
-metadata/merged/*
+metadata/merged/*.json
 images
 
 api_keys.py

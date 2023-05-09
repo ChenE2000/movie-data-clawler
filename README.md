@@ -2,3 +2,6 @@ https://masteryi.notion.site/deeea7ea328b4f42b740320f5629d8ab
 
 
 sudo docker compose up --abort-on-container-exit
+
+# TODO
+在使用搜索查找某电影ID时使用find_closest_match匹配title，这可能导致爬取的电影和预期不符，在后期需要调整
