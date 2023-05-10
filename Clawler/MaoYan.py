@@ -1,8 +1,11 @@
-from selenium.webdriver.common.by import By
-from Clawler.Driver import webDriver
-from tools.TitleFormatter import find_closest_match
-from tools.TencentOCR import ocr
 import time
+
+from selenium.webdriver.common.by import By
+
+from Clawler.Driver import webDriver
+from tools.TencentOCR import ocr
+from tools.TitleFormatter import find_closest_match
+
 
 def get_celebrity_boxoffice(cid) -> float:
     url = f"https://www.maoyan.com/films/celebrity/{cid}"
@@ -17,7 +20,7 @@ def get_celebrity_boxoffice(cid) -> float:
     boxoffice = float(ocr(base_64)[0]['DetectedText'])
     print(boxoffice)
     return boxoffice
-    
+
 
 def get_celebrity_nomination_award_times(cid) -> tuple:
     """ 
@@ -38,7 +41,7 @@ def get_celebrity_nomination_award_times(cid) -> tuple:
     return int(award_times), int(nominations_times)
 
 
-def get_movie_id_by_title(title: str) -> str:
+def get_movie_id_by_title(title: str) -> int:
     url = f"https://www.maoyan.com/films"
     driver = webDriver
 
@@ -70,7 +73,7 @@ def get_movie_id_by_title(title: str) -> str:
         })
 
     idx = find_closest_match(title, list(map(lambda x: x["text"], titles)))
-    if idx == None:
+    if idx is None:
         return None
     # print(titles, titles[idx])
     return int(titles[idx]["id"])

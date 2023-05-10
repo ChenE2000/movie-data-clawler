@@ -3,10 +3,11 @@ import json
 import typing
 from Movie import Movie
 
+
 def generate_movie_titles_todo_list() -> typing.List[Movie]:
     """ 生成电影标题待爬取列表,以时光网数据为基准 """
     existed = os.listdir('./metadata/merged/')
-    
+
     batch = []
     with open('./metadata/ShiGuang/10_000_movies.json', 'r', encoding='utf-8') as f:
         movies = json.load(f)

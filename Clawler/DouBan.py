@@ -9,7 +9,8 @@ headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36",
 }
 
-def get_movie_id_by_title(title: str) -> str:
+
+def get_movie_id_by_title(title: str) -> int:
     """ 通过电影标题获取电影ID """
     url = f"https://search.douban.com/movie/subject_search?search_text={title}&cat=1002"
     driver = webDriver
@@ -33,12 +34,13 @@ def get_movie_id_by_title(title: str) -> str:
         except:
             # skip if no <a> tag
             pass
-        
+
     idx = find_closest_match(title, list(map(lambda x: x["text"], titles)))
     if len(titles) == 0 or idx is None:
         return None
     # print(titles[idx])
     return int(titles[idx]["id"])
+
 
 def get_movie_subject_by_id(id) -> BeautifulSoup:
     url = f"https://movie.douban.com/subject/{id}/"
@@ -46,6 +48,7 @@ def get_movie_subject_by_id(id) -> BeautifulSoup:
     resp = requests.get(url, headers=headers)
     # find div with id="info" using bs4
     return BeautifulSoup(resp.text, "html.parser")
+
 
 def get_movie_basic_info_by_subject(soup: BeautifulSoup):
     """ 通过电影subject页面获取电影基本信息 """
@@ -60,6 +63,7 @@ def get_movie_basic_info_by_subject(soup: BeautifulSoup):
     pairs = dict(pairs)
     return pairs
 
+
 def get_movie_rating_info_by_subject(soup: BeautifulSoup):
     """ 通过电影subject页面获取电影评分信息 """
     rating = soup.find_all("strong", class_="ll rating_num")[0].text
@@ -69,6 +73,7 @@ def get_movie_rating_info_by_subject(soup: BeautifulSoup):
         "评分": float(rating),
         "评分人数": int(votes),
     }
+
 
 def get_movie_interested_info_by_subject(soup: BeautifulSoup):
     """ 通过电影subject页面获取电影感兴趣信息 """
@@ -84,4 +89,3 @@ def get_movie_interested_info_by_subject(soup: BeautifulSoup):
         "看过": interested[0],
         "想看": interested[1],
     }
-    
