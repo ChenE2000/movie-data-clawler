@@ -3,3 +3,4 @@ tencentcloud-sdk-python-ocr
 tencentcloud-sdk-python
 BeautifulSoup4
 requests
+redis
