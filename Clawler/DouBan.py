@@ -53,6 +53,7 @@ def get_movie_subject_by_id(id) -> BeautifulSoup:
 def get_movie_basic_info_by_subject(soup: BeautifulSoup):
     """ 通过电影subject页面获取电影基本信息 """
     info = soup.find_all("div", id="info")[0]
+    pic = soup.find_all("img", rel="v:image")[0].get("src")
     pairs = info.text.split("\n")
     pairs = list(map(lambda x: x.split(":"), pairs))
     # 去空值
@@ -61,6 +62,17 @@ def get_movie_basic_info_by_subject(soup: BeautifulSoup):
     pairs = list(map(lambda x: [x[0].strip(), x[1].strip()], pairs))
     # 转为字典
     pairs = dict(pairs)
+
+    pairs['导演'] = pairs['导演'].split(" / ")
+    pairs['编剧'] = pairs['编剧'].split(" / ")
+    pairs['主演'] = pairs['主演'].split(" / ")
+    pairs['类型'] = pairs['类型'].split(" / ")
+    pairs['制片国家/地区'] = pairs['制片国家/地区'].split(" / ")
+    pairs['语言'] = pairs['语言'].split(" / ")
+    pairs['上映日期'] = pairs['上映日期'].split(" / ")
+    pairs['片长'] = pairs['片长'].split(" / ")
+    pairs['封面'] = pic
+
     return pairs
 
 
