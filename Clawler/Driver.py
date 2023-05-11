@@ -45,14 +45,14 @@ class CustomedChrome:
             )
         elif mode == 'local':
             os.system(r'start chrome --remote-debugging-port=9527 --user-data-dir="F:\selenium"')
-            self.options.add_experimental_option("debuggerAddress", "127.0.0.1:9527")
+            self.option.add_experimental_option("debuggerAddress", "127.0.0.1:9527")
             return wb.Chrome(options=self.option)
         else:
             return wb.Chrome(options=self.option)
     
 
 # webDriver = CustomedChrome().set_headless().set_proxy(proxy).get_web_driver('remote')
-webDriver = CustomedChrome().get_web_driver('local')
+webDriver = CustomedChrome().set_proxy(proxy).get_web_driver('local')
 # # 设置Chrome选项
 # chrome_options = Options()
 # chrome_options.add_argument('--headless')  # 开启无头模式
