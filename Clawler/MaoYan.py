@@ -1,7 +1,9 @@
 import time
 
 from selenium.webdriver.common.by import By
-
+from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 from Clawler.Driver import webDriver
 from tools.TencentOCR import ocr
 from tools.TitleFormatter import find_closest_match
@@ -40,6 +42,49 @@ def get_celebrity_nomination_award_times(cid) -> tuple:
 
     return int(award_times), int(nominations_times)
 
+
+def get_movie_awards(title, id) -> list:
+    
+    driver = webDriver
+    driver.get(f"https://www.maoyan.com/films/{id}")
+    
+    before = driver.page_source
+
+    
+    time.sleep(3)
+    more_awards = driver.find_element(By.XPATH, "/html/body/div[4]/div/div[1]/div/div[3]/div[1]/div[3]/div[1]/a")
+    print("more_awards", more_awards)
+    actions = ActionChains(driver)
+    actions.move_to_element(more_awards).click().perform()
+    
+    
+    # ========================================
+    time.sleep(2)
+    
+    ul = driver.find_elements(By.CLASS_NAME, "award-list")[-1]
+    # find all li
+    lis = ul.find_elements(By.TAG_NAME, "li")
+    awards_list = []
+    
+    for li in lis:
+        # 获取li中第一个div的text =》 award_name
+        award_name = li.find_element(By.TAG_NAME, "div").text
+        portrait = li.find_element(By.CLASS_NAME, "portrait")
+        awards = li.find_element(By.CLASS_NAME, "content")
+        
+        # portrait img 的src
+        portrait_src = portrait.find_element(By.TAG_NAME, "img").get_attribute("src")
+        # awards
+        award_items = awards.find_elements(By.TAG_NAME, "div")
+        
+        awards_list.append({
+            "award_name": award_name,
+            "portrait_src": portrait_src,
+            "award_items": list(map(lambda x: x.text, award_items))
+        })
+    
+    return awards_list
+            
 
 def get_movie_id_by_title(title: str) -> int:
     url = f"https://www.maoyan.com/films"
