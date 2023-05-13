@@ -1,8 +1,13 @@
-from selenium.webdriver.common.by import By
-from Clawler.Driver import webDriver
-from tools.TitleFormatter import find_closest_match
-from tools.TencentOCR import ocr
 import time
+
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from Clawler.Driver import webDriver
+from tools.TencentOCR import ocr
+from tools.TitleFormatter import find_closest_match
+
 
 def get_celebrity_boxoffice(cid) -> float:
     url = f"https://www.maoyan.com/films/celebrity/{cid}"
@@ -17,28 +22,120 @@ def get_celebrity_boxoffice(cid) -> float:
     boxoffice = float(ocr(base_64)[0]['DetectedText'])
     print(boxoffice)
     return boxoffice
-    
 
-def get_celebrity_nomination_award_times(cid) -> tuple:
-    """ 
-    get celebrity nomination and award times
-    return: award_times, nominations_times
-    """
-    url = f"https://www.maoyan.com/films/celebrity/{cid}"
+
+# def get_celebrity_nomination_award_times(cid) -> tuple:
+#     """ 
+#     get celebrity nomination and award times
+#     return: award_times, nominations_times
+#     """
+#     url = f"https://www.maoyan.com/films/celebrity/{cid}"
+#     driver = webDriver
+#     driver.get(url)
+#     time.sleep(2)
+#     # find nomination times class="about-num"
+#     spans = driver.find_elements(By.CLASS_NAME, "about-num")
+#     spec = spans[-1].text
+#     # （共2次获奖，2次提名）
+#     spec = spec.replace("（共", "").replace("次获奖，", ",").replace("次提名）", "")
+#     award_times, nominations_times = spec.split(",")
+
+#     return int(award_times), int(nominations_times)
+
+def get_celebrity_awards(cid) -> list:
     driver = webDriver
+    url = f"https://www.maoyan.com/films/celebrity/{cid}"
     driver.get(url)
     time.sleep(2)
-    # find nomination times class="about-num"
-    spans = driver.find_elements(By.CLASS_NAME, "about-num")
-    spec = spans[-1].text
-    # （共2次获奖，2次提名）
-    spec = spec.replace("（共", "").replace("次获奖，", ",").replace("次提名）", "")
-    award_times, nominations_times = spec.split(",")
+    
+    # go to the bottom of the page
+    driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+    time.sleep(5)
+    
+    # find div with class="award-slider"
+    award_slider = driver.find_element(By.CLASS_NAME, "award-slider")
+    # find all class="item"
+    items = award_slider.find_elements(By.CLASS_NAME, "item")
+    
+    # find div with class="award-detail"
+    award_details = driver.find_element(By.CLASS_NAME, "award-detail")
+    # find all class="item"
+    details = award_details.find_elements(By.CLASS_NAME, "item")
+    
+    res_list = []
+    # 让鼠标悬停在每个item上，使得item显示
+    for i in range(len(items)):
+        item, detail = items[i], details[i]
+        ActionChains(driver).move_to_element(item).perform()
+        time.sleep(0.5)
+        award_cover = item.find_element(By.TAG_NAME, "img").get_attribute(name="src")
+        award_info = item.find_elements(By.TAG_NAME, "p")
+        item_basic_info = {
+            "获奖封面": award_cover,
+            "获奖名称": award_info[0].text,
+            "获奖次数": award_info[1].text
+        }
 
-    return int(award_times), int(nominations_times)
+        award_spec = []
+        li_s = detail.find_elements(By.TAG_NAME, "li")
+        for li in li_s:
+            infos = li.find_elements(By.TAG_NAME, "div")
+            # 取每个div中的text
+            infos = tuple(map(lambda x: x.text, infos))
+            award_spec.append(infos)
+        
+        res_list.append({
+            "获奖基本信息": item_basic_info,
+            "获奖详情": award_spec
+        })
+    
+    return res_list
 
 
-def get_movie_id_by_title(title: str) -> str:
+def get_movie_awards(title, id) -> list:
+    
+    driver = webDriver
+    driver.get(f"https://www.maoyan.com/films/{id}")
+    
+    before = driver.page_source
+
+    
+    time.sleep(3)
+    more_awards = driver.find_element(By.XPATH, "/html/body/div[4]/div/div[1]/div/div[3]/div[1]/div[3]/div[1]/a")
+    print("more_awards", more_awards)
+    actions = ActionChains(driver)
+    actions.move_to_element(more_awards).click().perform()
+    
+    
+    # ========================================
+    time.sleep(2)
+    
+    ul = driver.find_elements(By.CLASS_NAME, "award-list")[-1]
+    # find all li
+    lis = ul.find_elements(By.TAG_NAME, "li")
+    awards_list = []
+    
+    for li in lis:
+        # 获取li中第一个div的text =》 award_name
+        award_name = li.find_element(By.TAG_NAME, "div").text
+        portrait = li.find_element(By.CLASS_NAME, "portrait")
+        awards = li.find_element(By.CLASS_NAME, "content")
+        
+        # portrait img 的src
+        portrait_src = portrait.find_element(By.TAG_NAME, "img").get_attribute("src")
+        # awards
+        award_items = awards.find_elements(By.TAG_NAME, "div")
+        
+        awards_list.append({
+            "award_name": award_name,
+            "portrait_src": portrait_src,
+            "award_items": list(map(lambda x: x.text, award_items))
+        })
+    
+    return awards_list
+            
+
+def get_movie_id_by_title(title: str) -> int:
     url = f"https://www.maoyan.com/films"
     driver = webDriver
 
@@ -70,7 +167,7 @@ def get_movie_id_by_title(title: str) -> str:
         })
 
     idx = find_closest_match(title, list(map(lambda x: x["text"], titles)))
-    if idx == None:
+    if idx is None:
         return None
     # print(titles, titles[idx])
     return int(titles[idx]["id"])

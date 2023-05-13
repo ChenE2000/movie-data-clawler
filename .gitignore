@@ -5,5 +5,5 @@ data/authors/*.json
 data/works/*.json
 metadata/merged/*.json
 images
-
+.idea
 api_keys.py
