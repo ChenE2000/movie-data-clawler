@@ -24,23 +24,26 @@ def get_celebrity_boxoffice(cid) -> float:
     return boxoffice
 
 
-# def get_celebrity_nomination_award_times(cid) -> tuple:
-#     """ 
-#     get celebrity nomination and award times
-#     return: award_times, nominations_times
-#     """
-#     url = f"https://www.maoyan.com/films/celebrity/{cid}"
-#     driver = webDriver
-#     driver.get(url)
-#     time.sleep(2)
-#     # find nomination times class="about-num"
-#     spans = driver.find_elements(By.CLASS_NAME, "about-num")
-#     spec = spans[-1].text
-#     # （共2次获奖，2次提名）
-#     spec = spec.replace("（共", "").replace("次获奖，", ",").replace("次提名）", "")
-#     award_times, nominations_times = spec.split(",")
+def get_celebrity_nomination_award_times(cid) -> tuple:
+    """ 
+    get celebrity nomination and award times
+    return: award_times, nominations_times
+    """
+    url = f"https://www.maoyan.com/films/celebrity/{cid}"
+    driver = webDriver
+    driver.get(url)
+    time.sleep(2)
+    # find nomination times class="about-num"
+    spans = driver.find_elements(By.CLASS_NAME, "about-num")
+    spec = spans[-1].text
+    # （共2次获奖，2次提名）
+    spec = spec.replace("（共", "").replace("次获奖，", ",").replace("次提名）", "")
+    award_times, nominations_times = spec.split(",")
 
-#     return int(award_times), int(nominations_times)
+    return {
+        "获奖次数": int(award_times),
+        "提名次数": int(nominations_times)
+    }
 
 def get_celebrity_awards(cid) -> list:
     driver = webDriver
@@ -92,25 +95,27 @@ def get_celebrity_awards(cid) -> list:
     return res_list
 
 
-def get_movie_awards(title, id) -> list:
+def get_movie_awards_info_by_id(id) -> list:
     
     driver = webDriver
     driver.get(f"https://www.maoyan.com/films/{id}")
     
-    before = driver.page_source
 
-    
     time.sleep(3)
     more_awards = driver.find_element(By.XPATH, "/html/body/div[4]/div/div[1]/div/div[3]/div[1]/div[3]/div[1]/a")
     print("more_awards", more_awards)
     actions = ActionChains(driver)
     actions.move_to_element(more_awards).click().perform()
     
-    
     # ========================================
-    time.sleep(2)
+    time.sleep(1)
+    # scroll to bottom
+    driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
     
-    ul = driver.find_elements(By.CLASS_NAME, "award-list")[-1]
+    ul = driver.find_elements(By.CLASS_NAME, "award-list")
+    if len(ul) == 0:
+        return []
+    ul = ul[-1]
     # find all li
     lis = ul.find_elements(By.TAG_NAME, "li")
     awards_list = []
