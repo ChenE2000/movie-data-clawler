@@ -95,7 +95,7 @@ def get_celebrity_popularity_by_id(id):
 # print(res)
 
 
-def get_movie_technique_by_id(id):
+def get_movie_technique_by_id(id) -> list:
     # 输入电影的id，输出电影后期制作技术
     url = "https://front-gateway.mtime.com/library/movie/detail.api?&movieId=" + str(id)
 
@@ -109,12 +109,12 @@ def get_movie_technique_by_id(id):
 
     techniques = res['data']['basic']['versions']
 
-    dic_res = {
-        "后期制作技术":techniques
-    }
-    res = json.dumps(dic_res, ensure_ascii=False)
+    # dic_res = {
+    #     "后期制作技术":techniques
+    # }
+    # res = json.dumps(dic_res, ensure_ascii=False)
 
-    return res
+    return techniques
 
 
 if __name__ == "__main__":

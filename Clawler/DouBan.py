@@ -44,7 +44,7 @@ def get_movie_id_by_title(title: str) -> int:
 
 def get_movie_subject_by_id(id) -> BeautifulSoup:
     url = f"https://movie.douban.com/subject/{id}/"
-    print(url)
+    print(f"[豆瓣] {url}")
     resp = requests.get(url, headers=headers)
     # find div with id="info" using bs4
     return BeautifulSoup(resp.text, "html.parser")
@@ -63,14 +63,16 @@ def get_movie_basic_info_by_subject(soup: BeautifulSoup):
     # 转为字典
     pairs = dict(pairs)
 
-    pairs['导演'] = pairs['导演'].split(" / ")
-    pairs['编剧'] = pairs['编剧'].split(" / ")
-    pairs['主演'] = pairs['主演'].split(" / ")
-    pairs['类型'] = pairs['类型'].split(" / ")
-    pairs['制片国家/地区'] = pairs['制片国家/地区'].split(" / ")
-    pairs['语言'] = pairs['语言'].split(" / ")
-    pairs['上映日期'] = pairs['上映日期'].split(" / ")
-    pairs['片长'] = pairs['片长'].split(" / ")
+    # pairs['导演'] = pairs['导演'].split(" / ")
+    # pairs['编剧'] = pairs['编剧'].split(" / ")
+    # pairs['主演'] = pairs['主演'].split(" / ")
+    # pairs['类型'] = pairs['类型'].split(" / ")
+    # pairs['制片国家/地区'] = pairs['制片国家/地区'].split(" / ")
+    # pairs['语言'] = pairs['语言'].split(" / ")
+    # pairs['上映日期'] = pairs['上映日期'].split(" / ")
+    # pairs['片长'] = pairs['片长'].split(" / ")
+    for pair in pairs:
+        pairs[pair] = pairs[pair].split(" / ")
     pairs['封面'] = pic
 
     return pairs
@@ -78,9 +80,16 @@ def get_movie_basic_info_by_subject(soup: BeautifulSoup):
 
 def get_movie_rating_info_by_subject(soup: BeautifulSoup):
     """ 通过电影subject页面获取电影评分信息 """
-    rating = soup.find_all("strong", class_="ll rating_num")[0].text
+    # find <strong> with class="ll rating_num"
+    rating = soup.find_all("strong", class_="ll rating_num")
+    if len(rating) == 0:
+        raise Exception("rating not found")
+    rating = rating[0].text
     # find <span> with property="v:votes"
-    votes = soup.find_all("span", property="v:votes")[0].text
+    votes = soup.find_all("span", property="v:votes")
+    if len(votes) == 0:
+        raise Exception("votes not found")
+    votes = votes[0].text
     return {
         "评分": float(rating),
         "评分人数": int(votes),
@@ -97,6 +106,8 @@ def get_movie_interested_info_by_subject(soup: BeautifulSoup):
     interested = list(map(lambda x: x.text, interested))
     # extract number
     interested = list(map(lambda x: int(x.split("人")[0]), interested))
+    if len(interested) != 2:
+        raise Exception("interested not found")
     return {
         "看过": interested[0],
         "想看": interested[1],
