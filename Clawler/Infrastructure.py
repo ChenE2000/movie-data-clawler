@@ -2,7 +2,7 @@ import os
 import json
 import typing
 from Movie import Movie
-
+from DB.Context import redisDB as db_ctx
 
 def generate_movie_titles_todo_list() -> typing.List[Movie]:
     """ 生成电影标题待爬取列表,以时光网数据为基准 """
@@ -23,3 +23,28 @@ def generate_movie_titles_todo_list() -> typing.List[Movie]:
         raise Exception("No movie titles to crawl")
     print("Total movies to crawl: ", len(batch))
     return batch
+
+
+def generate_movie_todo_list_by_redis() -> typing.List[Movie]:
+    """ 从redis中获取电影待爬取列表 """
+    douban_ids = db_ctx.get_all_keys()
+    todos = []
+    
+    path = "./metadata/movies_with_boxoffice.json"
+    with open(path, "r", encoding="utf-8") as f:
+        movies = json.load(f)
+        for movie in movies:
+            if movie["ids"]["id_DouBan"] in douban_ids:
+                continue
+            item = Movie(
+                title=movie["title"], 
+                id_DouBan=movie["ids"]["id_DouBan"], 
+                id_MaoYan=movie["ids"]["id_MaoYan"], 
+                id_ShiGuang=movie["ids"]["id_ShiGuang"]
+                )
+            item.MaoYan['票房'] = movie["profession_films_boxoffice"]
+            todos.append(item)
+    
+    return todos            
+    
+    

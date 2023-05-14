@@ -1,4 +1,5 @@
 import json
+import time
 import Clawler.DouBan as DouBan
 import Clawler.ShiGuang as ShiGuang
 import Clawler.MaoYan as MaoYan
@@ -11,12 +12,19 @@ class Movie:
         self.id_MaoYan = id_MaoYan
         self.id_DouBan = id_DouBan
         self.id_ShiGuang = id_ShiGuang
+        
+        self.created_time = None
 
         self.DouBan = {}
         self.MaoYan = {}
         self.ShiGuang = {}
 
+    # def set_boxoffice(self):
+    #     self.MaoYan['票房'] = MaoYan.get_movie_boxoffice_by_id(self.id_MaoYan)
+        
     def clawler_action(self):
+        print(f"{self.title}正在爬取...")
+        self.created_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
         douban_subject = DouBan.get_movie_subject_by_id(self.id_DouBan)
         self.DouBan['基础信息'] = DouBan.get_movie_basic_info_by_subject(soup=douban_subject)
         self.DouBan['打分数据'] = DouBan.get_movie_rating_info_by_subject(soup=douban_subject)
@@ -30,6 +38,7 @@ class Movie:
     def _to_dict(self):
         return {
             "电影名称": self.title,
+            "获取时间": self.created_time,
             "id": {
                 "豆瓣": self.id_DouBan,
                 "时光": self.id_ShiGuang,
