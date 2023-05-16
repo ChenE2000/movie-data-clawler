@@ -22,9 +22,10 @@ def get_all_movies_id():
 
 def main():
     todos = generate_movie_todo_list_by_redis()
+    print("剩余任务:", len(todos))
     
     while len(todos) > 0:
-        time.sleep(3)
+        time.sleep(1)
         movie = random.choice(todos)
         if db_ctx.exist(movie.id_DouBan):
             todos.remove(movie)
@@ -34,7 +35,7 @@ def main():
                 data = movie._to_dict()
                 db_ctx.set(str(movie.id_DouBan), json.dumps(data, ensure_ascii=False))
             except Exception as e:
-                print(e)
+                print(f"[ERROR] {e}")
                 time.sleep(2)
                 continue
 

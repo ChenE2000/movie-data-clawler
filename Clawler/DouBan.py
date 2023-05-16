@@ -83,12 +83,19 @@ def get_movie_rating_info_by_subject(soup: BeautifulSoup):
     # find <strong> with class="ll rating_num"
     rating = soup.find_all("strong", class_="ll rating_num")
     if len(rating) == 0:
-        raise Exception("rating not found")
+        return {
+            "评分": -1,
+            "评分人数": 0,
+        }
     rating = rating[0].text
     # find <span> with property="v:votes"
     votes = soup.find_all("span", property="v:votes")
     if len(votes) == 0:
-        raise Exception("votes not found")
+        return {
+            "评分": -1,
+            "评分人数": 0,
+        }
+
     votes = votes[0].text
     return {
         "评分": float(rating),
@@ -107,7 +114,10 @@ def get_movie_interested_info_by_subject(soup: BeautifulSoup):
     # extract number
     interested = list(map(lambda x: int(x.split("人")[0]), interested))
     if len(interested) != 2:
-        raise Exception("interested not found")
+        return {
+        "看过": -1,
+        "想看": -1,
+        }
     return {
         "看过": interested[0],
         "想看": interested[1],

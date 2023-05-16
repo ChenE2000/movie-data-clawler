@@ -23,7 +23,7 @@ class Movie:
     #     self.MaoYan['票房'] = MaoYan.get_movie_boxoffice_by_id(self.id_MaoYan)
         
     def clawler_action(self):
-        print(f"{self.title}正在爬取...")
+        print(f"[任务] <{self.title}>正在爬取...")
         self.created_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
         douban_subject = DouBan.get_movie_subject_by_id(self.id_DouBan)
         self.DouBan['基础信息'] = DouBan.get_movie_basic_info_by_subject(soup=douban_subject)
