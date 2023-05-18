@@ -1,5 +1,8 @@
 import json
-from Clawler.MaoYan import get_celebrity_nomination_award_times
+import Clawler.AiMan as AiMan
+import Clawler.ShiGuang as ShiGuang
+import Clawler.DouBan as DouBan
+
 
 # declare a enum class
 class CelebrityType:
@@ -11,17 +14,23 @@ class CelebrityType:
 
 class Celebrity:
 
-    def __init__(self, id):
-        self.id = id
-        self.name = None
+    def __init__(self, name):
+        self.name = name
         self.type: CelebrityType = None
         self.boxoffice_sum = None
         self.award_times = None
         self.nominations_times = None
     
     def clawler_action(self):
-        self.award_times, self.nominations_times = get_celebrity_nomination_award_times(self.id)
-        # TODO clawler other info
+        self.id = {
+            # "猫眼": self.id,
+            "艾曼": AiMan.get_celebrity_id_by_name(self.name),
+            "时光": ShiGuang.get_celebrity_id_by_name(self.name),
+        }
+
+        self.award_times, self.nominations_times = MaoYan.get_celebrity_nomination_award_times(self.id)
+        self.awards = MaoYan.get_celebrity_awards(self.id)
+
 
     def _to_dict(self):
         return {
