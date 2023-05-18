@@ -193,14 +193,16 @@ def get_profession_films_boxoffice(title: str) -> str:
     driver = webDriver
     driver.get(url)
     time.sleep(2)
-    # find nomination times class="box.red"
-    spans = driver.find_elements(By.CLASS_NAME, "box.red")
-    spec = spans[0].text
-    # （共2次获奖，2次提名）
-    spec = spec.replace("票房", "")
-    print(spec)
-
-    return spec
+    try:
+        # find nomination times class="box.red"
+        spans = driver.find_elements(By.CLASS_NAME, "box.red")
+        spec = spans[0].text
+        # （共2次获奖，2次提名）
+        spec = spec.replace("票房", "")
+        print(spec)
+        return spec
+    except Exception:
+        return 0
 
 
 if __name__ == "__main__":
