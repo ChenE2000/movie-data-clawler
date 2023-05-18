@@ -38,7 +38,7 @@ def get_top_10_000_movies():
     return batch
 
 # 输入的是演员的ID，输出是时光网演员的喜爱度
-def mtime_actor_favoriteRating(id):
+def get_celebrity_popularity_by_id(id):
     url = "http://people.mtime.com/ "+ str(id)
     driver = webDriver
     driver.get(url)
@@ -59,59 +59,59 @@ def mtime_actor_favoriteRating(id):
 
     return json_res
 
-#输入是电影的ID
-def mtime_rating(id):
-    url = "https://front-gateway.mtime.com/library/movie/detail.api?&movieId="+str(id)
+# #输入是电影的ID
+# def get_movie_rating_info_by_id(id):
+#     url = "https://front-gateway.mtime.com/library/movie/detail.api?&movieId="+str(id)
 
-    headers = {
-        'User-Agent':"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
-    }
-    page_text = requests.get(url=url,headers=headers)
+#     headers = {
+#         'User-Agent':"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+#     }
+#     page_text = requests.get(url=url,headers=headers)
 
-    res = page_text.json()
+#     res = page_text.json()
 
-    # 电影名
-    name = res['data']['basic']['name']
-    # 电影的5项评分
-    movieSubItemRatings = res['data']['basic']['movieSubItemRatings']
-    # 总评分
-    overallRating = res['data']['basic']['overallRating']
-    # 评分人数
-    ratingCount = res['data']['basic']['ratingCount']
-    # 想看人数
-    wantToSeeCount = res['data']['basic']['wantToSeeCount']
+#     # 电影名
+#     name = res['data']['basic']['name']
+#     # 电影的5项评分
+#     movieSubItemRatings = res['data']['basic']['movieSubItemRatings']
+#     # 总评分
+#     overallRating = res['data']['basic']['overallRating']
+#     # 评分人数
+#     ratingCount = res['data']['basic']['ratingCount']
+#     # 想看人数
+#     wantToSeeCount = res['data']['basic']['wantToSeeCount']
 
-    dic_res = {
-        '电影名':name,
-        '评分':movieSubItemRatings,
-        '总评分':overallRating,
-        '评分人数':ratingCount,
-        '想看人数':wantToSeeCount
-    }
+#     dic_res = {
+#         '电影名':name,
+#         '评分':movieSubItemRatings,
+#         '总评分':overallRating,
+#         '评分人数':ratingCount,
+#         '想看人数':wantToSeeCount
+#     }
 
-    res = json.dumps(dic_res,ensure_ascii=False)
-    return res
+#     res = json.dumps(dic_res,ensure_ascii=False)
+#     return res
 
-#输入电影的id，输出电影后期制作技术
-def mtime_techniques(id):
-    url = "https://front-gateway.mtime.com/library/movie/detail.api?&movieId=" + str(id)
+# #输入电影的id，输出电影后期制作技术
+# def get_movie_technique_by_id(id):
+#     url = "https://front-gateway.mtime.com/library/movie/detail.api?&movieId=" + str(id)
 
-    headers = {
-        'User-Agent': "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
-    }
+#     headers = {
+#         'User-Agent': "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+#     }
 
-    page_text = requests.get(url=url, headers=headers)
+#     page_text = requests.get(url=url, headers=headers)
 
-    res = page_text.json()
+#     res = page_text.json()
 
-    techniques = res['data']['basic']['versions']
+#     techniques = res['data']['basic']['versions']
 
-    dic_res = {
-        "后期制作技术":techniques
-    }
-    res = json.dumps(dic_res, ensure_ascii=False)
+#     dic_res = {
+#         "后期制作技术":techniques
+#     }
+#     res = json.dumps(dic_res, ensure_ascii=False)
 
-    return res
+#     return res
 
 
 

@@ -2,6 +2,7 @@ import os
 import json
 import typing
 from Movie import Movie
+from Celebrity import Celebrity
 from DB.Context import redisDB as db_ctx
 
 def generate_movie_titles_todo_list() -> typing.List[Movie]:
@@ -29,6 +30,7 @@ def generate_movie_todo_list_by_redis() -> typing.List[Movie]:
     """ 从redis中获取电影待爬取列表 """
     douban_ids = db_ctx.get_all_keys()
     todos = []
+    print("Total movies crawled: ", len(douban_ids), douban_ids)
     
     path = "./metadata/movies_with_boxoffice.json"
     with open(path, "r", encoding="utf-8") as f:
@@ -48,3 +50,24 @@ def generate_movie_todo_list_by_redis() -> typing.List[Movie]:
     return todos            
     
     
+def generate_celebrity_todo_list() -> typing.List[Movie]:
+    """ 生成演员待爬取列表 """
+    path = "./all.json"
+    with open(path, "r", encoding="utf-8") as f:
+        movies = json.load(f)
+        celebrities = []
+        for movie in movies:
+            if '导演' in movie['豆瓣']['基础信息']:
+                celebrities += movie['豆瓣']['基础信息']['导演']
+            if '编剧' in movie['豆瓣']['基础信息']:
+                celebrities += movie['豆瓣']['基础信息']['编剧']
+            if '主演' in movie['豆瓣']['基础信息']:
+                celebrities += movie['豆瓣']['基础信息']['主演']
+    
+    deduped = list(set(celebrities))
+    print("Total celebrities to crawl: ", len(deduped))
+    return deduped
+
+
+def generate_celebrity_todo_list_by_redis() -> typing.List[Celebrity]:
+    pass

@@ -45,7 +45,7 @@ def get_movie_id_by_title(title: str) -> int:
 def get_movie_subject_by_id(id) -> BeautifulSoup:
     url = f"https://movie.douban.com/subject/{id}/"
     print(f"[豆瓣] {url}")
-    resp = requests.get(url, headers=headers)
+    resp = requests.get(url, headers=headers, timeout=5)
     # find div with id="info" using bs4
     return BeautifulSoup(resp.text, "html.parser")
 
@@ -106,7 +106,14 @@ def get_movie_rating_info_by_subject(soup: BeautifulSoup):
 def get_movie_interested_info_by_subject(soup: BeautifulSoup):
     """ 通过电影subject页面获取电影感兴趣信息 """
     # find div with class="subject-others-interests-ft"
-    interested = soup.find_all("div", class_="subject-others-interests-ft")[0]
+    interested = soup.find_all("div", class_="subject-others-interests-ft")
+    
+    if len(interested) == 0:
+        return {
+        "看过": -1,
+        "想看": -1,
+        }
+    interested = interested[0]
     # find all a tags
     interested = interested.find_all("a")
     # extract text

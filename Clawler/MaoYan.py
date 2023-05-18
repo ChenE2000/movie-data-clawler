@@ -102,7 +102,11 @@ def get_movie_awards_info_by_id(id) -> list:
     
 
     time.sleep(3)
-    more_awards = driver.find_element(By.XPATH, "/html/body/div[4]/div/div[1]/div/div[3]/div[1]/div[3]/div[1]/a")
+    try:
+        more_awards = driver.find_element(By.XPATH, "/html/body/div[4]/div/div[1]/div/div[3]/div[1]/div[3]/div[1]/a")
+    except Exception as e:
+        print("[ERROR]无获奖")
+        return []
     # print("more_awards", more_awards)
     actions = ActionChains(driver)
     actions.move_to_element(more_awards).click().perform()
