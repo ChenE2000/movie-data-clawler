@@ -217,22 +217,18 @@ def login():
 
 
 # 输入演员名字列表
-def main_processes(name: list) -> dict:
+def main_processes(name: str) -> dict:
     login()
-    actor = []
-    for i in range(0, len(name)):
-        id_aiman = get_movie_id_by_title(name[i])
-        print(id_aiman)
-        if id_aiman is None:
-            Q = {'商业价值': 0, '代言指数': 0, '热度指数': 0, '口碑指数': 0, '专业指数': 0,
-                 'actor_name': name[i]}
-        else:
-            H = get_actor_sum(id_aiman)
-            Q = {'商业价值': H[0], '代言指数': H[1], '热度指数': H[2], '口碑指数': H[3], '专业指数': H[4],
-                 'actor_name': name[i]}
-        print(Q)
-        actor.append(Q)
-    return actor
+    id_aiman = get_movie_id_by_title(name)
+    print(id_aiman)
+    if id_aiman is None:
+        Q = {'商业价值': 0, '代言指数': 0, '热度指数': 0, '口碑指数': 0, '专业指数': 0,
+             'actor_name': name}
+    else:
+        H = get_actor_sum(id_aiman)
+        Q = {'商业价值': H[0], '代言指数': H[1], '热度指数': H[2], '口碑指数': H[3], '专业指数': H[4],
+             'actor_name': name}
+    return Q
 
 
 if __name__ == "__main__":
