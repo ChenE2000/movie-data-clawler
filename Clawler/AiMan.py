@@ -194,24 +194,50 @@ def get_movie_id_by_title(title: str) -> str:
         return None
 
 
-def main_processes(title: str) -> list:
-    id_aiman = get_movie_id_by_title(title)
-    print(id_aiman)
-    if id_aiman is None:
-        Q = [0, 0, 0, 0, 0, title]
-    else:
-        Q = get_actor_sum(id_aiman)
-        Q.append(test[i])
-    print(Q)
-    return Q
+# 账号登录
+def login():
+    url = f"https://www.chinaindex.net/login?from=/"
+    driver = webDriver
+
+    driver.get(url)
+    time.sleep(5)
+
+    # find search input
+    driver.find_element_by_tag_name('input').send_keys('13008337368')
+    time.sleep(3)
+    search_pwd = driver.find_element(By.CLASS_NAME, "pass")
+    search_pwd.send_keys('123456')
+    time.sleep(3)
+
+    # find search button
+    search_button = driver.find_elements_by_class_name("custom-button")
+    # search_button.click()
+    search_button[1].click()
+    time.sleep(10)
+
+
+# 输入演员名字列表
+def main_processes(name: list) -> dict:
+    login()
+    actor = []
+    for i in range(0, len(name)):
+        id_aiman = get_movie_id_by_title(name[i])
+        print(id_aiman)
+        if id_aiman is None:
+            Q = {'商业价值': 0, '代言指数': 0, '热度指数': 0, '口碑指数': 0, '专业指数': 0,
+                 'actor_name': name[i]}
+        else:
+            H = get_actor_sum(id_aiman)
+            Q = {'商业价值': H[0], '代言指数': H[1], '热度指数': H[2], '口碑指数': H[3], '专业指数': H[4],
+                 'actor_name': name[i]}
+        print(Q)
+        actor.append(Q)
+    return actor
 
 
 if __name__ == "__main__":
-    test = ["123", "黄磊"]
-    data = []
-    for i in range(len(test)):
-        Q = main_processes(test[i])
-        data.append(Q)
+    test = ["123", "黄磊", "黄渤", "吴磊", "张艺兴", "刘昊然", "刘宪华", "张杰", "何炅", "彭昱畅", "王嘉尔", "谢娜", "鹿晗"]
+    main_processes(test)
+
     # with open("./aiman.json", "w", encoding="utf-8") as f:
     #     json.dump(data, f, ensure_ascii=False)
-
