@@ -7018,17 +7018,6 @@
         }
     },
     {
-        "title": "爱情公寓",
-        "profession_films_boxoffice": "5.55亿",
-        "ids": {
-            "title": "爱情公寓",
-            "id_IMDb": null,
-            "id_MaoYan": 1175253,
-            "id_DouBan": 24852545,
-            "id_ShiGuang": 257529
-        }
-    },
-    {
         "title": "非凡任务",
         "profession_films_boxoffice": "1.56亿",
         "ids": {
@@ -7359,17 +7348,6 @@
         }
     },
     {
-        "title": "大闹天宫",
-        "profession_films_boxoffice": "4266.1万",
-        "ids": {
-            "title": "大闹天宫",
-            "id_IMDb": null,
-            "id_MaoYan": 49,
-            "id_DouBan": 35668415,
-            "id_ShiGuang": 17418
-        }
-    },
-    {
         "title": "白雪公主之矮人力量",
         "profession_films_boxoffice": "1747.1万",
         "ids": {
@@ -7444,17 +7422,6 @@
             "id_MaoYan": 245,
             "id_DouBan": 5954505,
             "id_ShiGuang": 149253
-        }
-    },
-    {
-        "title": "神话",
-        "profession_films_boxoffice": "9700.0万",
-        "ids": {
-            "title": "神话",
-            "id_IMDb": null,
-            "id_MaoYan": 442,
-            "id_DouBan": 3732699,
-            "id_ShiGuang": 18290
         }
     },
     {
@@ -8921,17 +8888,6 @@
         }
     },
     {
-        "title": "武林外传",
-        "profession_films_boxoffice": "1.86亿",
-        "ids": {
-            "title": "武林外传",
-            "id_IMDb": null,
-            "id_MaoYan": 410556,
-            "id_DouBan": 30224708,
-            "id_ShiGuang": 126415
-        }
-    },
-    {
         "title": "独行月球",
         "profession_films_boxoffice": "31.03亿",
         "ids": {
@@ -10040,17 +9996,6 @@
             "id_MaoYan": 1215786,
             "id_DouBan": 27180759,
             "id_ShiGuang": 252908
-        }
-    },
-    {
-        "title": "手机",
-        "profession_films_boxoffice": "5450.0万",
-        "ids": {
-            "title": "手机",
-            "id_IMDb": null,
-            "id_MaoYan": 484,
-            "id_DouBan": 4111333,
-            "id_ShiGuang": 13992
         }
     },
     {
@@ -11374,17 +11319,6 @@
         }
     },
     {
-        "title": "盗墓笔记",
-        "profession_films_boxoffice": "10.03亿",
-        "ids": {
-            "title": "盗墓笔记",
-            "id_IMDb": null,
-            "id_MaoYan": 79203,
-            "id_DouBan": 24827387,
-            "id_ShiGuang": 203656
-        }
-    },
-    {
         "title": "龙拳小子",
         "profession_films_boxoffice": "495.0万",
         "ids": {
@@ -11547,17 +11481,6 @@
             "id_MaoYan": 70798,
             "id_DouBan": 6753096,
             "id_ShiGuang": 149450
-        }
-    },
-    {
-        "title": "杜拉拉升职记",
-        "profession_films_boxoffice": "1.24亿",
-        "ids": {
-            "title": "杜拉拉升职记",
-            "id_IMDb": null,
-            "id_MaoYan": 342,
-            "id_DouBan": 11600151,
-            "id_ShiGuang": 104453
         }
     },
     {
@@ -13464,17 +13387,6 @@
         }
     },
     {
-        "title": "匆匆那年",
-        "profession_films_boxoffice": "5.88亿",
-        "ids": {
-            "title": "匆匆那年",
-            "id_IMDb": null,
-            "id_MaoYan": 245980,
-            "id_DouBan": 25779218,
-            "id_ShiGuang": 210239
-        }
-    },
-    {
         "title": "素人特工",
         "profession_films_boxoffice": "2248.4万",
         "ids": {
@@ -13604,17 +13516,6 @@
             "id_MaoYan": 78015,
             "id_DouBan": 20411172,
             "id_ShiGuang": 224574
-        }
-    },
-    {
-        "title": "三生三世十里桃花",
-        "profession_films_boxoffice": "5.35亿",
-        "ids": {
-            "title": "三生三世十里桃花",
-            "id_IMDb": null,
-            "id_MaoYan": 246896,
-            "id_DouBan": 25975243,
-            "id_ShiGuang": 225337
         }
     },
     {
@@ -14454,17 +14355,6 @@
         }
     },
     {
-        "title": "北京爱情故事",
-        "profession_films_boxoffice": "4.06亿",
-        "ids": {
-            "title": "北京爱情故事",
-            "id_IMDb": null,
-            "id_MaoYan": 78324,
-            "id_DouBan": 24736566,
-            "id_ShiGuang": 205122
-        }
-    },
-    {
         "title": "红色恋人",
         "profession_films_boxoffice": "2507.3万",
         "ids": {
@@ -14594,17 +14484,6 @@
             "id_MaoYan": 1301444,
             "id_DouBan": 34888476,
             "id_ShiGuang": 266397
-        }
-    },
-    {
-        "title": "唐人街探案",
-        "profession_films_boxoffice": "8.23亿",
-        "ids": {
-            "title": "唐人街探案",
-            "id_IMDb": null,
-            "id_MaoYan": 247300,
-            "id_DouBan": 30354606,
-            "id_ShiGuang": 220627
         }
     },
     {
@@ -14828,28 +14707,6 @@
         }
     },
     {
-        "title": "微微一笑很倾城",
-        "profession_films_boxoffice": "2.75亿",
-        "ids": {
-            "title": "微微一笑很倾城",
-            "id_IMDb": null,
-            "id_MaoYan": 246897,
-            "id_DouBan": 26427831,
-            "id_ShiGuang": 230237
-        }
-    },
-    {
-        "title": "将爱情进行到底",
-        "profession_films_boxoffice": "1.93亿",
-        "ids": {
-            "title": "将爱情进行到底",
-            "id_IMDb": null,
-            "id_MaoYan": 217,
-            "id_DouBan": 4896263,
-            "id_ShiGuang": 129684
-        }
-    },
-    {
         "title": "绝录求生",
         "profession_films_boxoffice": "412.3万",
         "ids": {
@@ -14869,17 +14726,6 @@
             "id_MaoYan": 78281,
             "id_DouBan": 24752702,
             "id_ShiGuang": 203529
-        }
-    },
-    {
-        "title": "小城之春",
-        "profession_films_boxoffice": "150.0万",
-        "ids": {
-            "title": "小城之春",
-            "id_IMDb": null,
-            "id_MaoYan": 206481,
-            "id_DouBan": 1301272,
-            "id_ShiGuang": 12234
         }
     },
     {
@@ -15334,17 +15180,6 @@
         }
     },
     {
-        "title": "爸爸去哪儿",
-        "profession_films_boxoffice": "6.96亿",
-        "ids": {
-            "title": "爸爸去哪儿",
-            "id_IMDb": null,
-            "id_MaoYan": 78621,
-            "id_DouBan": 25785314,
-            "id_ShiGuang": 208207
-        }
-    },
-    {
         "title": "201413",
         "profession_films_boxoffice": "41.9万",
         "ids": {
@@ -15499,17 +15334,6 @@
         }
     },
     {
-        "title": "何以笙箫默",
-        "profession_films_boxoffice": "3.52亿",
-        "ids": {
-            "title": "何以笙箫默",
-            "id_IMDb": null,
-            "id_MaoYan": 246292,
-            "id_DouBan": 25885442,
-            "id_ShiGuang": 218532
-        }
-    },
-    {
         "title": "兄弟，别闹！",
         "profession_films_boxoffice": "1210.2万",
         "ids": {
@@ -15650,17 +15474,6 @@
             "id_MaoYan": 78251,
             "id_DouBan": 34440326,
             "id_ShiGuang": 159541
-        }
-    },
-    {
-        "title": "小时代",
-        "profession_films_boxoffice": "4.84亿",
-        "ids": {
-            "title": "小时代",
-            "id_IMDb": null,
-            "id_MaoYan": 78051,
-            "id_DouBan": 7161723,
-            "id_ShiGuang": 184034
         }
     },
     {
@@ -15928,17 +15741,6 @@
         }
     },
     {
-        "title": "咱们结婚吧",
-        "profession_films_boxoffice": "2.84亿",
-        "ids": {
-            "title": "咱们结婚吧",
-            "id_IMDb": null,
-            "id_MaoYan": 246315,
-            "id_DouBan": 26140241,
-            "id_ShiGuang": 218670
-        }
-    },
-    {
         "title": "死亡派对",
         "profession_films_boxoffice": "545.7万",
         "ids": {
@@ -16002,17 +15804,6 @@
             "id_MaoYan": 78357,
             "id_DouBan": 19966126,
             "id_ShiGuang": 175337
-        }
-    },
-    {
-        "title": "指甲刀人魔",
-        "profession_films_boxoffice": "450.8万",
-        "ids": {
-            "title": "指甲刀人魔",
-            "id_IMDb": null,
-            "id_MaoYan": 341528,
-            "id_DouBan": 26352435,
-            "id_ShiGuang": 222649
         }
     },
     {
@@ -16577,17 +16368,6 @@
         }
     },
     {
-        "title": "深夜食堂",
-        "profession_films_boxoffice": "2419.4万",
-        "ids": {
-            "title": "深夜食堂",
-            "id_IMDb": null,
-            "id_MaoYan": 1183641,
-            "id_DouBan": 26868553,
-            "id_ShiGuang": 228635
-        }
-    },
-    {
         "title": "索命暹罗之按摩师",
         "profession_films_boxoffice": "248.9万",
         "ids": {
@@ -16775,17 +16555,6 @@
         }
     },
     {
-        "title": "黑猫警长",
-        "profession_films_boxoffice": "1226.9万",
-        "ids": {
-            "title": "黑猫警长",
-            "id_IMDb": null,
-            "id_MaoYan": 1227438,
-            "id_DouBan": 26421921,
-            "id_ShiGuang": 48692
-        }
-    },
-    {
         "title": "似水年华",
         "profession_films_boxoffice": "1345.1万",
         "ids": {
@@ -16860,17 +16629,6 @@
             "id_MaoYan": 246165,
             "id_DouBan": 25806660,
             "id_ShiGuang": 216940
-        }
-    },
-    {
-        "title": "邋遢大王奇遇记",
-        "profession_films_boxoffice": "373.1万",
-        "ids": {
-            "title": "邋遢大王奇遇记",
-            "id_IMDb": null,
-            "id_MaoYan": 1222855,
-            "id_DouBan": 11502154,
-            "id_ShiGuang": 48895
         }
     },
     {
@@ -17072,17 +16830,6 @@
         }
     },
     {
-        "title": "葫芦兄弟",
-        "profession_films_boxoffice": "845.2万",
-        "ids": {
-            "title": "葫芦兄弟",
-            "id_IMDb": null,
-            "id_MaoYan": 368331,
-            "id_DouBan": 3062897,
-            "id_ShiGuang": 132765
-        }
-    },
-    {
         "title": "喜剧王",
         "profession_films_boxoffice": "56.8万",
         "ids": {
@@ -17237,17 +16984,6 @@
         }
     },
     {
-        "title": "玉观音",
-        "profession_films_boxoffice": "800.0万",
-        "ids": {
-            "title": "玉观音",
-            "id_IMDb": null,
-            "id_MaoYan": 1225059,
-            "id_DouBan": 5401736,
-            "id_ShiGuang": 14387
-        }
-    },
-    {
         "title": "时间都去哪了",
         "profession_films_boxoffice": "26.5万",
         "ids": {
@@ -17388,17 +17124,6 @@
             "id_MaoYan": 369486,
             "id_DouBan": 30280003,
             "id_ShiGuang": 134466
-        }
-    },
-    {
-        "title": "最好的我们",
-        "profession_films_boxoffice": "4.17亿",
-        "ids": {
-            "title": "最好的我们",
-            "id_IMDb": null,
-            "id_MaoYan": 1242431,
-            "id_DouBan": 26266919,
-            "id_ShiGuang": 233516
         }
     },
     {
@@ -17600,28 +17325,6 @@
         }
     },
     {
-        "title": "绝世高手",
-        "profession_films_boxoffice": "1.01亿",
-        "ids": {
-            "title": "绝世高手",
-            "id_IMDb": null,
-            "id_MaoYan": 1196168,
-            "id_DouBan": 26754831,
-            "id_ShiGuang": 236657
-        }
-    },
-    {
-        "title": "白鹿原",
-        "profession_films_boxoffice": "1.41亿",
-        "ids": {
-            "title": "白鹿原",
-            "id_IMDb": null,
-            "id_MaoYan": 739,
-            "id_DouBan": 26322644,
-            "id_ShiGuang": 45887
-        }
-    },
-    {
         "title": "粉红女郎",
         "profession_films_boxoffice": "395.9万",
         "ids": {
@@ -17630,17 +17333,6 @@
             "id_MaoYan": 368417,
             "id_DouBan": 2244363,
             "id_ShiGuang": 56193
-        }
-    },
-    {
-        "title": "红高粱",
-        "profession_films_boxoffice": "88.4万",
-        "ids": {
-            "title": "红高粱",
-            "id_IMDb": null,
-            "id_MaoYan": 961,
-            "id_DouBan": 30482086,
-            "id_ShiGuang": 10808
         }
     },
     {
@@ -17696,17 +17388,6 @@
             "id_MaoYan": 341657,
             "id_DouBan": 26578107,
             "id_ShiGuang": 226903
-        }
-    },
-    {
-        "title": "我在故宫修文物",
-        "profession_films_boxoffice": "667.3万",
-        "ids": {
-            "title": "我在故宫修文物",
-            "id_IMDb": null,
-            "id_MaoYan": 368678,
-            "id_DouBan": 26703457,
-            "id_ShiGuang": 233316
         }
     },
     {
@@ -17809,28 +17490,6 @@
         }
     },
     {
-        "title": "跟我的前妻谈恋爱",
-        "profession_films_boxoffice": "682.0万",
-        "ids": {
-            "title": "跟我的前妻谈恋爱",
-            "id_IMDb": null,
-            "id_MaoYan": 64989,
-            "id_DouBan": 5282454,
-            "id_ShiGuang": 101051
-        }
-    },
-    {
-        "title": "十万个冷笑话",
-        "profession_films_boxoffice": "1.19亿",
-        "ids": {
-            "title": "十万个冷笑话",
-            "id_IMDb": null,
-            "id_MaoYan": 246067,
-            "id_DouBan": 25805054,
-            "id_ShiGuang": 209803
-        }
-    },
-    {
         "title": "焦裕禄",
         "profession_films_boxoffice": "17.1万",
         "ids": {
@@ -17861,17 +17520,6 @@
             "id_MaoYan": 246052,
             "id_DouBan": 25722108,
             "id_ShiGuang": 46310
-        }
-    },
-    {
-        "title": "苏乞儿",
-        "profession_films_boxoffice": "4897.0万",
-        "ids": {
-            "title": "苏乞儿",
-            "id_IMDb": null,
-            "id_MaoYan": 20,
-            "id_DouBan": 35309670,
-            "id_ShiGuang": 89003
         }
     },
     {
@@ -17938,17 +17586,6 @@
             "id_MaoYan": 337118,
             "id_DouBan": 26369910,
             "id_ShiGuang": 221976
-        }
-    },
-    {
-        "title": "武林外传",
-        "profession_films_boxoffice": "1.86亿",
-        "ids": {
-            "title": "武林外传",
-            "id_IMDb": null,
-            "id_MaoYan": 410556,
-            "id_DouBan": 30224708,
-            "id_ShiGuang": 126415
         }
     },
     {
@@ -18062,17 +17699,6 @@
         }
     },
     {
-        "title": "四大名捕",
-        "profession_films_boxoffice": "1.99亿",
-        "ids": {
-            "title": "四大名捕",
-            "id_IMDb": null,
-            "id_MaoYan": 601,
-            "id_DouBan": 6124012,
-            "id_ShiGuang": 108169
-        }
-    },
-    {
         "title": "美人依旧",
         "profession_films_boxoffice": "1000.0万",
         "ids": {
@@ -18158,17 +17784,6 @@
             "id_MaoYan": 78467,
             "id_DouBan": 6863979,
             "id_ShiGuang": 142077
-        }
-    },
-    {
-        "title": "私人订制",
-        "profession_films_boxoffice": "7.13亿",
-        "ids": {
-            "title": "私人订制",
-            "id_IMDb": null,
-            "id_MaoYan": 78226,
-            "id_DouBan": 25830945,
-            "id_ShiGuang": 164689
         }
     },
     {
@@ -18290,17 +17905,6 @@
             "id_MaoYan": 79234,
             "id_DouBan": 25845591,
             "id_ShiGuang": 209137
-        }
-    },
-    {
-        "title": "宝葫芦的秘密",
-        "profession_films_boxoffice": "10.5万",
-        "ids": {
-            "title": "宝葫芦的秘密",
-            "id_IMDb": null,
-            "id_MaoYan": 207,
-            "id_DouBan": 1960298,
-            "id_ShiGuang": 55012
         }
     },
     {
@@ -18466,17 +18070,6 @@
             "id_MaoYan": 1136547,
             "id_DouBan": 26847189,
             "id_ShiGuang": 235956
-        }
-    },
-    {
-        "title": "智取威虎山",
-        "profession_films_boxoffice": "8.83亿",
-        "ids": {
-            "title": "智取威虎山",
-            "id_IMDb": null,
-            "id_MaoYan": 78631,
-            "id_DouBan": 10807909,
-            "id_ShiGuang": 152510
         }
     },
     {
@@ -18766,17 +18359,6 @@
         }
     },
     {
-        "title": "男才女貌",
-        "profession_films_boxoffice": "200.0万",
-        "ids": {
-            "title": "男才女貌",
-            "id_IMDb": null,
-            "id_MaoYan": 368585,
-            "id_DouBan": 2045259,
-            "id_ShiGuang": 50032
-        }
-    },
-    {
         "title": "二次初恋",
         "profession_films_boxoffice": "2616.2万",
         "ids": {
@@ -19049,17 +18631,6 @@
             "id_MaoYan": 344809,
             "id_DouBan": 26779288,
             "id_ShiGuang": 238265
-        }
-    },
-    {
-        "title": "红色娘子军",
-        "profession_films_boxoffice": "50",
-        "ids": {
-            "title": "红色娘子军",
-            "id_IMDb": null,
-            "id_MaoYan": 240068,
-            "id_DouBan": 3586998,
-            "id_ShiGuang": 28892
         }
     },
     {
@@ -19478,17 +19049,6 @@
             "id_MaoYan": 350,
             "id_DouBan": 6013758,
             "id_ShiGuang": 146942
-        }
-    },
-    {
-        "title": "李雷和韩梅梅",
-        "profession_films_boxoffice": "4085.0万",
-        "ids": {
-            "title": "李雷和韩梅梅",
-            "id_IMDb": null,
-            "id_MaoYan": 1206859,
-            "id_DouBan": 26289138,
-            "id_ShiGuang": 139252
         }
     },
     {
@@ -20900,28 +20460,6 @@
         }
     },
     {
-        "title": "上海王",
-        "profession_films_boxoffice": "1361.1万",
-        "ids": {
-            "title": "上海王",
-            "id_IMDb": null,
-            "id_MaoYan": 336923,
-            "id_DouBan": 4078592,
-            "id_ShiGuang": 67913
-        }
-    },
-    {
-        "title": "闪闪的红星",
-        "profession_films_boxoffice": "5357.9万",
-        "ids": {
-            "title": "闪闪的红星",
-            "id_IMDb": null,
-            "id_MaoYan": 271,
-            "id_DouBan": 25695312,
-            "id_ShiGuang": 58481
-        }
-    },
-    {
         "title": "飞跃地心",
         "profession_films_boxoffice": "21.4万",
         "ids": {
@@ -20985,17 +20523,6 @@
             "id_MaoYan": 339180,
             "id_DouBan": 26087346,
             "id_ShiGuang": 42430
-        }
-    },
-    {
-        "title": "非诚勿扰",
-        "profession_films_boxoffice": "2.60亿",
-        "ids": {
-            "title": "非诚勿扰",
-            "id_IMDb": null,
-            "id_MaoYan": 286,
-            "id_DouBan": 11632580,
-            "id_ShiGuang": 84647
         }
     },
     {
@@ -21164,17 +20691,6 @@
         }
     },
     {
-        "title": "金太狼的幸福生活",
-        "profession_films_boxoffice": "557.3万",
-        "ids": {
-            "title": "金太狼的幸福生活",
-            "id_IMDb": null,
-            "id_MaoYan": 369426,
-            "id_DouBan": 21355933,
-            "id_ShiGuang": 164131
-        }
-    },
-    {
         "title": "李双双",
         "profession_films_boxoffice": "160.2万",
         "ids": {
@@ -21238,17 +20754,6 @@
             "id_MaoYan": 246053,
             "id_DouBan": 25712447,
             "id_ShiGuang": 216294
-        }
-    },
-    {
-        "title": "古董局中局",
-        "profession_films_boxoffice": "4.29亿",
-        "ids": {
-            "title": "古董局中局",
-            "id_IMDb": null,
-            "id_MaoYan": 1212303,
-            "id_DouBan": 26996619,
-            "id_ShiGuang": 236662
         }
     },
     {
@@ -21340,17 +20845,6 @@
         }
     },
     {
-        "title": "画皮",
-        "profession_films_boxoffice": "2.32亿",
-        "ids": {
-            "title": "画皮",
-            "id_IMDb": null,
-            "id_MaoYan": 162,
-            "id_DouBan": 35327367,
-            "id_ShiGuang": 59588
-        }
-    },
-    {
         "title": "白毛女",
         "profession_films_boxoffice": "584.0万",
         "ids": {
@@ -21359,17 +20853,6 @@
             "id_MaoYan": 57279,
             "id_DouBan": 26708775,
             "id_ShiGuang": 232382
-        }
-    },
-    {
-        "title": "大人物",
-        "profession_films_boxoffice": "1624.5万",
-        "ids": {
-            "title": "大人物",
-            "id_IMDb": null,
-            "id_MaoYan": 78582,
-            "id_DouBan": 5968450,
-            "id_ShiGuang": 134097
         }
     },
     {
@@ -21392,17 +20875,6 @@
             "id_MaoYan": 1216296,
             "id_DouBan": 27611552,
             "id_ShiGuang": 258535
-        }
-    },
-    {
-        "title": "失恋33天",
-        "profession_films_boxoffice": "3.02亿",
-        "ids": {
-            "title": "失恋33天",
-            "id_IMDb": null,
-            "id_MaoYan": 347,
-            "id_DouBan": 11530935,
-            "id_ShiGuang": 131704
         }
     },
     {
@@ -21505,17 +20977,6 @@
         }
     },
     {
-        "title": "沉默的证人",
-        "profession_films_boxoffice": "1.81亿",
-        "ids": {
-            "title": "沉默的证人",
-            "id_IMDb": null,
-            "id_MaoYan": 1207237,
-            "id_DouBan": 26816090,
-            "id_ShiGuang": 75704
-        }
-    },
-    {
         "title": "笑林足球",
         "profession_films_boxoffice": "86.7万",
         "ids": {
@@ -21557,17 +21018,6 @@
             "id_MaoYan": 1223584,
             "id_DouBan": 30246061,
             "id_ShiGuang": 264319
-        }
-    },
-    {
-        "title": "心理罪",
-        "profession_films_boxoffice": "3.04亿",
-        "ids": {
-            "title": "心理罪",
-            "id_IMDb": null,
-            "id_MaoYan": 342381,
-            "id_DouBan": 26698000,
-            "id_ShiGuang": 233631
         }
     },
     {
@@ -21656,17 +21106,6 @@
             "id_MaoYan": 291853,
             "id_DouBan": 34925635,
             "id_ShiGuang": 42448
-        }
-    },
-    {
-        "title": "十月围城",
-        "profession_films_boxoffice": "2.13亿",
-        "ids": {
-            "title": "十月围城",
-            "id_IMDb": null,
-            "id_MaoYan": 78909,
-            "id_DouBan": 21351469,
-            "id_ShiGuang": 98991
         }
     },
     {
@@ -22000,17 +21439,6 @@
         }
     },
     {
-        "title": "西风烈",
-        "profession_films_boxoffice": "6846.0万",
-        "ids": {
-            "title": "西风烈",
-            "id_IMDb": null,
-            "id_MaoYan": 234,
-            "id_DouBan": 21339361,
-            "id_ShiGuang": 81569
-        }
-    },
-    {
         "title": "六欲天",
         "profession_films_boxoffice": "132.3万",
         "ids": {
@@ -22019,17 +21447,6 @@
             "id_MaoYan": 1226611,
             "id_DouBan": 30257991,
             "id_ShiGuang": 258546
-        }
-    },
-    {
-        "title": "山楂树之恋",
-        "profession_films_boxoffice": "1.44亿",
-        "ids": {
-            "title": "山楂树之恋",
-            "id_IMDb": null,
-            "id_MaoYan": 78861,
-            "id_DouBan": 5244060,
-            "id_ShiGuang": 118998
         }
     },
     {
@@ -22217,17 +21634,6 @@
             "id_MaoYan": 1250733,
             "id_DouBan": 30385361,
             "id_ShiGuang": 268265
-        }
-    },
-    {
-        "title": "白毛女",
-        "profession_films_boxoffice": "584.0万",
-        "ids": {
-            "title": "白毛女",
-            "id_IMDb": null,
-            "id_MaoYan": 57279,
-            "id_DouBan": 26708775,
-            "id_ShiGuang": 232382
         }
     },
     {
@@ -22426,17 +21832,6 @@
             "id_MaoYan": 1235456,
             "id_DouBan": 30329714,
             "id_ShiGuang": 260655
-        }
-    },
-    {
-        "title": "秦时明月",
-        "profession_films_boxoffice": "5954.7万",
-        "ids": {
-            "title": "秦时明月",
-            "id_IMDb": null,
-            "id_MaoYan": 370154,
-            "id_DouBan": 25919408,
-            "id_ShiGuang": 216337
         }
     },
     {
@@ -22924,17 +22319,6 @@
         }
     },
     {
-        "title": "智取威虎山",
-        "profession_films_boxoffice": "8.83亿",
-        "ids": {
-            "title": "智取威虎山",
-            "id_IMDb": null,
-            "id_MaoYan": 78631,
-            "id_DouBan": 10807909,
-            "id_ShiGuang": 152510
-        }
-    },
-    {
         "title": "如果有一天我将会离开你",
         "profession_films_boxoffice": "439.1万",
         "ids": {
@@ -23251,17 +22635,6 @@
             "id_MaoYan": 1132403,
             "id_DouBan": 26840300,
             "id_ShiGuang": 235702
-        }
-    },
-    {
-        "title": "睡在我上铺的兄弟",
-        "profession_films_boxoffice": "1.27亿",
-        "ids": {
-            "title": "睡在我上铺的兄弟",
-            "id_IMDb": null,
-            "id_MaoYan": 248881,
-            "id_DouBan": 26428938,
-            "id_ShiGuang": 225158
         }
     },
     {
@@ -23801,17 +23174,6 @@
             "id_MaoYan": 433075,
             "id_DouBan": 22992794,
             "id_ShiGuang": 236282
-        }
-    },
-    {
-        "title": "霸王别姬",
-        "profession_films_boxoffice": "5.3万",
-        "ids": {
-            "title": "霸王别姬",
-            "id_IMDb": null,
-            "id_MaoYan": 1203,
-            "id_DouBan": 26946299,
-            "id_ShiGuang": 10190
         }
     },
     {
@@ -24662,17 +24024,6 @@
         }
     },
     {
-        "title": "一场风花雪月的事",
-        "profession_films_boxoffice": "2263.7万",
-        "ids": {
-            "title": "一场风花雪月的事",
-            "id_IMDb": null,
-            "id_MaoYan": 78001,
-            "id_DouBan": 4237863,
-            "id_ShiGuang": 136968
-        }
-    },
-    {
         "title": "爱在廊桥",
         "profession_films_boxoffice": "3",
         "ids": {
@@ -24805,17 +24156,6 @@
         }
     },
     {
-        "title": "谈谈心恋恋爱",
-        "profession_films_boxoffice": "5009.5万",
-        "ids": {
-            "title": "谈谈心恋恋爱",
-            "id_IMDb": null,
-            "id_MaoYan": 368153,
-            "id_DouBan": 2245506,
-            "id_ShiGuang": 49627
-        }
-    },
-    {
         "title": "果",
         "profession_films_boxoffice": "3.34亿",
         "ids": {
@@ -24890,17 +24230,6 @@
             "id_MaoYan": 328,
             "id_DouBan": 6849056,
             "id_ShiGuang": 160603
-        }
-    },
-    {
-        "title": "云南虫谷",
-        "profession_films_boxoffice": "1.50亿",
-        "ids": {
-            "title": "云南虫谷",
-            "id_IMDb": null,
-            "id_MaoYan": 345655,
-            "id_DouBan": 35042912,
-            "id_ShiGuang": 232552
         }
     },
     {
@@ -25432,17 +24761,6 @@
         }
     },
     {
-        "title": "泡芙小姐",
-        "profession_films_boxoffice": "1934.0万",
-        "ids": {
-            "title": "泡芙小姐",
-            "id_IMDb": null,
-            "id_MaoYan": 1199446,
-            "id_DouBan": 30143475,
-            "id_ShiGuang": 247627
-        }
-    },
-    {
         "title": "难以置信",
         "profession_films_boxoffice": "151.4万",
         "ids": {
@@ -25539,17 +24857,6 @@
             "id_MaoYan": 1220437,
             "id_DouBan": 27202758,
             "id_ShiGuang": 251976
-        }
-    },
-    {
-        "title": "辛亥革命",
-        "profession_films_boxoffice": "5004.6万",
-        "ids": {
-            "title": "辛亥革命",
-            "id_IMDb": null,
-            "id_MaoYan": 61356,
-            "id_DouBan": 4896305,
-            "id_ShiGuang": 131848
         }
     },
     {
@@ -25660,17 +24967,6 @@
             "id_MaoYan": 246256,
             "id_DouBan": 26242664,
             "id_ShiGuang": 218404
-        }
-    },
-    {
-        "title": "西岳奇童",
-        "profession_films_boxoffice": "400.0万",
-        "ids": {
-            "title": "西岳奇童",
-            "id_IMDb": null,
-            "id_MaoYan": 578,
-            "id_DouBan": 1790366,
-            "id_ShiGuang": 49329
         }
     },
     {
@@ -26048,17 +25344,6 @@
         }
     },
     {
-        "title": "美人鱼",
-        "profession_films_boxoffice": "33.91亿",
-        "ids": {
-            "title": "美人鱼",
-            "id_IMDb": null,
-            "id_MaoYan": 246063,
-            "id_DouBan": 35588323,
-            "id_ShiGuang": 209007
-        }
-    },
-    {
         "title": "聊斋之画皮",
         "profession_films_boxoffice": "452.2万",
         "ids": {
@@ -26111,17 +25396,6 @@
             "id_MaoYan": 21152,
             "id_DouBan": 1822215,
             "id_ShiGuang": 37559
-        }
-    },
-    {
-        "title": "狙击手",
-        "profession_films_boxoffice": "6.08亿",
-        "ids": {
-            "title": "狙击手",
-            "id_IMDb": null,
-            "id_MaoYan": 1367251,
-            "id_DouBan": 35215390,
-            "id_ShiGuang": 269747
         }
     },
     {
@@ -26213,17 +25487,6 @@
         }
     },
     {
-        "title": "书剑恩仇录",
-        "profession_films_boxoffice": "4915",
-        "ids": {
-            "title": "书剑恩仇录",
-            "id_IMDb": null,
-            "id_MaoYan": 375821,
-            "id_DouBan": 3619107,
-            "id_ShiGuang": 35690
-        }
-    },
-    {
         "title": "迷局伏香",
         "profession_films_boxoffice": "61.2万",
         "ids": {
@@ -26257,17 +25520,6 @@
         }
     },
     {
-        "title": "我们的十年",
-        "profession_films_boxoffice": "4398.4万",
-        "ids": {
-            "title": "我们的十年",
-            "id_IMDb": null,
-            "id_MaoYan": 247718,
-            "id_DouBan": 25908065,
-            "id_ShiGuang": 217079
-        }
-    },
-    {
         "title": "旺扎的雨靴",
         "profession_films_boxoffice": "30.0万",
         "ids": {
@@ -26287,17 +25539,6 @@
             "id_MaoYan": 345458,
             "id_DouBan": 26806651,
             "id_ShiGuang": 234612
-        }
-    },
-    {
-        "title": "夜半歌声",
-        "profession_films_boxoffice": "703",
-        "ids": {
-            "title": "夜半歌声",
-            "id_IMDb": null,
-            "id_MaoYan": 336,
-            "id_DouBan": 2282464,
-            "id_ShiGuang": 12408
         }
     },
     {
@@ -26331,17 +25572,6 @@
             "id_MaoYan": 299351,
             "id_DouBan": 1306868,
             "id_ShiGuang": 23682
-        }
-    },
-    {
-        "title": "小兵张嘎",
-        "profession_films_boxoffice": "1.7万",
-        "ids": {
-            "title": "小兵张嘎",
-            "id_IMDb": null,
-            "id_MaoYan": 371419,
-            "id_DouBan": 36357382,
-            "id_ShiGuang": 12232
         }
     },
     {
@@ -26408,17 +25638,6 @@
             "id_MaoYan": 1246861,
             "id_DouBan": 30393792,
             "id_ShiGuang": 262312
-        }
-    },
-    {
-        "title": "唐山大地震",
-        "profession_films_boxoffice": "6.49亿",
-        "ids": {
-            "title": "唐山大地震",
-            "id_IMDb": null,
-            "id_MaoYan": 180,
-            "id_DouBan": 6872258,
-            "id_ShiGuang": 99400
         }
     },
     {
@@ -27159,17 +26378,6 @@
         }
     },
     {
-        "title": "小兵张嘎",
-        "profession_films_boxoffice": "1.7万",
-        "ids": {
-            "title": "小兵张嘎",
-            "id_IMDb": null,
-            "id_MaoYan": 371419,
-            "id_DouBan": 36357382,
-            "id_ShiGuang": 12232
-        }
-    },
-    {
         "title": "爱心",
         "profession_films_boxoffice": "100.0万",
         "ids": {
@@ -27222,17 +26430,6 @@
             "id_MaoYan": 247862,
             "id_DouBan": 26336350,
             "id_ShiGuang": 221948
-        }
-    },
-    {
-        "title": "定军山",
-        "profession_films_boxoffice": "3210",
-        "ids": {
-            "title": "定军山",
-            "id_IMDb": null,
-            "id_MaoYan": 217678,
-            "id_DouBan": 30221273,
-            "id_ShiGuang": 40797
         }
     },
     {
@@ -27324,17 +26521,6 @@
         }
     },
     {
-        "title": "奇门遁甲",
-        "profession_films_boxoffice": "2.99亿",
-        "ids": {
-            "title": "奇门遁甲",
-            "id_IMDb": null,
-            "id_MaoYan": 344183,
-            "id_DouBan": 33218378,
-            "id_ShiGuang": 229668
-        }
-    },
-    {
         "title": "荒野加油站",
         "profession_films_boxoffice": "19.2万",
         "ids": {
@@ -27409,17 +26595,6 @@
             "id_MaoYan": 1203739,
             "id_DouBan": 35588323,
             "id_ShiGuang": 244311
-        }
-    },
-    {
-        "title": "罗小黑战记",
-        "profession_films_boxoffice": "3.15亿",
-        "ids": {
-            "title": "罗小黑战记",
-            "id_IMDb": null,
-            "id_MaoYan": 359377,
-            "id_DouBan": 26709258,
-            "id_ShiGuang": 259358
         }
     },
     {
@@ -27566,17 +26741,6 @@
         }
     },
     {
-        "title": "三少爷的剑",
-        "profession_films_boxoffice": "1.00亿",
-        "ids": {
-            "title": "三少爷的剑",
-            "id_IMDb": null,
-            "id_MaoYan": 79088,
-            "id_DouBan": 21350556,
-            "id_ShiGuang": 193462
-        }
-    },
-    {
         "title": "无疯也起浪",
         "profession_films_boxoffice": "153.7万",
         "ids": {
@@ -27706,28 +26870,6 @@
             "id_MaoYan": 1222188,
             "id_DouBan": 30237381,
             "id_ShiGuang": 257792
-        }
-    },
-    {
-        "title": "纯真年代",
-        "profession_films_boxoffice": "23.6万",
-        "ids": {
-            "title": "纯真年代",
-            "id_IMDb": null,
-            "id_MaoYan": 8303,
-            "id_DouBan": 30263969,
-            "id_ShiGuang": 235042
-        }
-    },
-    {
-        "title": "英雄",
-        "profession_films_boxoffice": "2.50亿",
-        "ids": {
-            "title": "英雄",
-            "id_IMDb": null,
-            "id_MaoYan": 11536,
-            "id_DouBan": 1306123,
-            "id_ShiGuang": 12469
         }
     },
     {
@@ -28127,17 +27269,6 @@
         }
     },
     {
-        "title": "熊猫的故事",
-        "profession_films_boxoffice": "1603",
-        "ids": {
-            "title": "熊猫的故事",
-            "id_IMDb": null,
-            "id_MaoYan": 932422,
-            "id_DouBan": 2252497,
-            "id_ShiGuang": 105560
-        }
-    },
-    {
         "title": "渴望的青春",
         "profession_films_boxoffice": "1810",
         "ids": {
@@ -28402,17 +27533,6 @@
         }
     },
     {
-        "title": "闪光少女",
-        "profession_films_boxoffice": "6489.9万",
-        "ids": {
-            "title": "闪光少女",
-            "id_IMDb": null,
-            "id_MaoYan": 1132316,
-            "id_DouBan": 30175281,
-            "id_ShiGuang": 235456
-        }
-    },
-    {
         "title": "国家宝藏",
         "profession_films_boxoffice": "3600.0万",
         "ids": {
@@ -28432,17 +27552,6 @@
             "id_MaoYan": 78855,
             "id_DouBan": 1307117,
             "id_ShiGuang": 37881
-        }
-    },
-    {
-        "title": "叶问",
-        "profession_films_boxoffice": "8491.4万",
-        "ids": {
-            "title": "叶问",
-            "id_IMDb": null,
-            "id_MaoYan": 284,
-            "id_DouBan": 11598977,
-            "id_ShiGuang": 80074
         }
     },
     {
@@ -28476,17 +27585,6 @@
             "id_MaoYan": 1211693,
             "id_DouBan": 27199679,
             "id_ShiGuang": 251892
-        }
-    },
-    {
-        "title": "密战",
-        "profession_films_boxoffice": "7954.3万",
-        "ids": {
-            "title": "密战",
-            "id_IMDb": null,
-            "id_MaoYan": 338328,
-            "id_DouBan": 26316956,
-            "id_ShiGuang": 220789
         }
     },
     {
@@ -28633,17 +27731,6 @@
         }
     },
     {
-        "title": "武则天",
-        "profession_films_boxoffice": "2.86亿",
-        "ids": {
-            "title": "武则天",
-            "id_IMDb": null,
-            "id_MaoYan": 253919,
-            "id_DouBan": 30372355,
-            "id_ShiGuang": 92276
-        }
-    },
-    {
         "title": "信仰者",
         "profession_films_boxoffice": "1161.1万",
         "ids": {
@@ -28652,17 +27739,6 @@
             "id_MaoYan": 1225029,
             "id_DouBan": 30244759,
             "id_ShiGuang": 259334
-        }
-    },
-    {
-        "title": "书剑恩仇录",
-        "profession_films_boxoffice": "4915",
-        "ids": {
-            "title": "书剑恩仇录",
-            "id_IMDb": null,
-            "id_MaoYan": 375821,
-            "id_DouBan": 3619107,
-            "id_ShiGuang": 35690
         }
     },
     {
@@ -29249,28 +28325,6 @@
         }
     },
     {
-        "title": "乘风破浪",
-        "profession_films_boxoffice": "10.46亿",
-        "ids": {
-            "title": "乘风破浪",
-            "id_IMDb": null,
-            "id_MaoYan": 1170255,
-            "id_DouBan": 35030748,
-            "id_ShiGuang": 237054
-        }
-    },
-    {
-        "title": "白毛女",
-        "profession_films_boxoffice": "584.0万",
-        "ids": {
-            "title": "白毛女",
-            "id_IMDb": null,
-            "id_MaoYan": 57279,
-            "id_DouBan": 26708775,
-            "id_ShiGuang": 232382
-        }
-    },
-    {
         "title": "红旗渠",
         "profession_films_boxoffice": "87.4万",
         "ids": {
@@ -29290,17 +28344,6 @@
             "id_MaoYan": 1217141,
             "id_DouBan": 30128986,
             "id_ShiGuang": 255303
-        }
-    },
-    {
-        "title": "平原游击队",
-        "profession_films_boxoffice": "1.4万",
-        "ids": {
-            "title": "平原游击队",
-            "id_IMDb": null,
-            "id_MaoYan": 246339,
-            "id_DouBan": 21335034,
-            "id_ShiGuang": 42339
         }
     },
     {
@@ -29458,17 +28501,6 @@
         }
     },
     {
-        "title": "杨门女将之女将初征",
-        "profession_films_boxoffice": "90.6万",
-        "ids": {
-            "title": "杨门女将之女将初征",
-            "id_IMDb": null,
-            "id_MaoYan": 76953,
-            "id_DouBan": 30168001,
-            "id_ShiGuang": 262583
-        }
-    },
-    {
         "title": "布达拉宫",
         "profession_films_boxoffice": "40.0万",
         "ids": {
@@ -29623,17 +28655,6 @@
         }
     },
     {
-        "title": "大惊小怪",
-        "profession_films_boxoffice": "200.0万",
-        "ids": {
-            "title": "大惊小怪",
-            "id_IMDb": null,
-            "id_MaoYan": 27766,
-            "id_DouBan": 2049351,
-            "id_ShiGuang": 49256
-        }
-    },
-    {
         "title": "毛丰美",
         "profession_films_boxoffice": "629.4万",
         "ids": {
@@ -29722,17 +28743,6 @@
         }
     },
     {
-        "title": "阿凡提",
-        "profession_films_boxoffice": "7841.8万",
-        "ids": {
-            "title": "阿凡提",
-            "id_IMDb": null,
-            "id_MaoYan": 718414,
-            "id_DouBan": 1304513,
-            "id_ShiGuang": 46620
-        }
-    },
-    {
         "title": "红花绿叶",
         "profession_films_boxoffice": "27.6万",
         "ids": {
@@ -29763,17 +28773,6 @@
             "id_MaoYan": 317220,
             "id_DouBan": 3087473,
             "id_ShiGuang": 52977
-        }
-    },
-    {
-        "title": "柳浪闻莺",
-        "profession_films_boxoffice": "351.3万",
-        "ids": {
-            "title": "柳浪闻莺",
-            "id_IMDb": null,
-            "id_MaoYan": 1301515,
-            "id_DouBan": 34890921,
-            "id_ShiGuang": 270413
         }
     },
     {
@@ -29818,17 +28817,6 @@
             "id_MaoYan": 52781,
             "id_DouBan": 3813953,
             "id_ShiGuang": 67496
-        }
-    },
-    {
-        "title": "古剑奇谭",
-        "profession_films_boxoffice": "1411.9万",
-        "ids": {
-            "title": "古剑奇谭",
-            "id_IMDb": null,
-            "id_MaoYan": 368778,
-            "id_DouBan": 35559885,
-            "id_ShiGuang": 195899
         }
     },
     {
@@ -30107,17 +29095,6 @@
         }
     },
     {
-        "title": "大约在冬季",
-        "profession_films_boxoffice": "2.27亿",
-        "ids": {
-            "title": "大约在冬季",
-            "id_IMDb": null,
-            "id_MaoYan": 1250662,
-            "id_DouBan": 35748702,
-            "id_ShiGuang": 263446
-        }
-    },
-    {
         "title": "男生贾里",
         "profession_films_boxoffice": "117.0万",
         "ids": {
@@ -30162,17 +29139,6 @@
         }
     },
     {
-        "title": "大路朝天",
-        "profession_films_boxoffice": "2665.5万",
-        "ids": {
-            "title": "大路朝天",
-            "id_IMDb": null,
-            "id_MaoYan": 1249315,
-            "id_DouBan": 36085613,
-            "id_ShiGuang": 229853
-        }
-    },
-    {
         "title": "红月亮",
         "profession_films_boxoffice": "2.5万",
         "ids": {
@@ -30203,17 +29169,6 @@
             "id_MaoYan": 1221388,
             "id_DouBan": 1466493,
             "id_ShiGuang": 258153
-        }
-    },
-    {
-        "title": "何以笙箫默",
-        "profession_films_boxoffice": "3.52亿",
-        "ids": {
-            "title": "何以笙箫默",
-            "id_IMDb": null,
-            "id_MaoYan": 246292,
-            "id_DouBan": 25885442,
-            "id_ShiGuang": 218532
         }
     },
     {
@@ -30269,17 +29224,6 @@
             "id_MaoYan": 381658,
             "id_DouBan": 6101726,
             "id_ShiGuang": 46237
-        }
-    },
-    {
-        "title": "南征北战",
-        "profession_films_boxoffice": "1339",
-        "ids": {
-            "title": "南征北战",
-            "id_IMDb": null,
-            "id_MaoYan": 226785,
-            "id_DouBan": 20473376,
-            "id_ShiGuang": 29992
         }
     },
     {
@@ -30602,17 +29546,6 @@
         }
     },
     {
-        "title": "夜半歌声",
-        "profession_films_boxoffice": "703",
-        "ids": {
-            "title": "夜半歌声",
-            "id_IMDb": null,
-            "id_MaoYan": 336,
-            "id_DouBan": 2282464,
-            "id_ShiGuang": 12408
-        }
-    },
-    {
         "title": "产科男医生",
         "profession_films_boxoffice": "11.8万",
         "ids": {
@@ -30789,17 +29722,6 @@
         }
     },
     {
-        "title": "马兰花",
-        "profession_films_boxoffice": "829.0万",
-        "ids": {
-            "title": "马兰花",
-            "id_IMDb": null,
-            "id_MaoYan": 2930699,
-            "id_DouBan": 3742094,
-            "id_ShiGuang": 95566
-        }
-    },
-    {
         "title": "星溪的三次奇遇",
         "profession_films_boxoffice": "691.5万",
         "ids": {
@@ -30808,17 +29730,6 @@
             "id_MaoYan": 1229565,
             "id_DouBan": 30268948,
             "id_ShiGuang": 259178
-        }
-    },
-    {
-        "title": "霍元甲",
-        "profession_films_boxoffice": "1.05亿",
-        "ids": {
-            "title": "霍元甲",
-            "id_IMDb": null,
-            "id_MaoYan": 599,
-            "id_DouBan": 34858549,
-            "id_ShiGuang": 56347
         }
     },
     {
@@ -30896,17 +29807,6 @@
             "id_MaoYan": 632848,
             "id_DouBan": 6523543,
             "id_ShiGuang": 150069
-        }
-    },
-    {
-        "title": "孙中山",
-        "profession_films_boxoffice": "1.36亿",
-        "ids": {
-            "title": "孙中山",
-            "id_IMDb": null,
-            "id_MaoYan": 253205,
-            "id_DouBan": 30335123,
-            "id_ShiGuang": 29856
         }
     },
     {
@@ -31061,17 +29961,6 @@
             "id_MaoYan": 1281621,
             "id_DouBan": 33393269,
             "id_ShiGuang": 264212
-        }
-    },
-    {
-        "title": "东归英雄传",
-        "profession_films_boxoffice": "1927",
-        "ids": {
-            "title": "东归英雄传",
-            "id_IMDb": null,
-            "id_MaoYan": 455,
-            "id_DouBan": 3111441,
-            "id_ShiGuang": 42505
         }
     },
     {
@@ -31339,17 +30228,6 @@
         }
     },
     {
-        "title": "于无声处",
-        "profession_films_boxoffice": "4114",
-        "ids": {
-            "title": "于无声处",
-            "id_IMDb": null,
-            "id_MaoYan": 371699,
-            "id_DouBan": 35205039,
-            "id_ShiGuang": 45680
-        }
-    },
-    {
         "title": "秘密",
         "profession_films_boxoffice": "3689.0万",
         "ids": {
@@ -31438,17 +30316,6 @@
         }
     },
     {
-        "title": "栀子花开",
-        "profession_films_boxoffice": "3.78亿",
-        "ids": {
-            "title": "栀子花开",
-            "id_IMDb": null,
-            "id_MaoYan": 247261,
-            "id_DouBan": 26021055,
-            "id_ShiGuang": 217296
-        }
-    },
-    {
         "title": "出生入死",
         "profession_films_boxoffice": "1.2万",
         "ids": {
@@ -31493,17 +30360,6 @@
         }
     },
     {
-        "title": "保密局的枪声",
-        "profession_films_boxoffice": "1380",
-        "ids": {
-            "title": "保密局的枪声",
-            "id_IMDb": null,
-            "id_MaoYan": 290160,
-            "id_DouBan": 26892902,
-            "id_ShiGuang": 42419
-        }
-    },
-    {
         "title": "谁是卧底",
         "profession_films_boxoffice": "3131.7万",
         "ids": {
@@ -31523,17 +30379,6 @@
             "id_MaoYan": 1211701,
             "id_DouBan": 27199690,
             "id_ShiGuang": 251899
-        }
-    },
-    {
-        "title": "杜拉拉升职记",
-        "profession_films_boxoffice": "1.24亿",
-        "ids": {
-            "title": "杜拉拉升职记",
-            "id_IMDb": null,
-            "id_MaoYan": 342,
-            "id_DouBan": 11600151,
-            "id_ShiGuang": 104453
         }
     },
     {
@@ -31589,17 +30434,6 @@
             "id_MaoYan": 344561,
             "id_DouBan": 27091548,
             "id_ShiGuang": 249434
-        }
-    },
-    {
-        "title": "黄金时代",
-        "profession_films_boxoffice": "5127.5万",
-        "ids": {
-            "title": "黄金时代",
-            "id_IMDb": null,
-            "id_MaoYan": 78650,
-            "id_DouBan": 10545939,
-            "id_ShiGuang": 181317
         }
     },
     {
@@ -31721,17 +30555,6 @@
             "id_MaoYan": 348962,
             "id_DouBan": 4102922,
             "id_ShiGuang": 42417
-        }
-    },
-    {
-        "title": "危险关系",
-        "profession_films_boxoffice": "6251.1万",
-        "ids": {
-            "title": "危险关系",
-            "id_IMDb": null,
-            "id_MaoYan": 776,
-            "id_DouBan": 6527269,
-            "id_ShiGuang": 149581
         }
     },
     {
@@ -31900,17 +30723,6 @@
         }
     },
     {
-        "title": "孩子王",
-        "profession_films_boxoffice": "1.0万",
-        "ids": {
-            "title": "孩子王",
-            "id_IMDb": null,
-            "id_MaoYan": 2889102,
-            "id_DouBan": 25728264,
-            "id_ShiGuang": 10740
-        }
-    },
-    {
         "title": "杜丽娘",
         "profession_films_boxoffice": "5.4万",
         "ids": {
@@ -31974,17 +30786,6 @@
             "id_MaoYan": 382050,
             "id_DouBan": 6003251,
             "id_ShiGuang": 37803
-        }
-    },
-    {
-        "title": "任长霞",
-        "profession_films_boxoffice": "2600.0万",
-        "ids": {
-            "title": "任长霞",
-            "id_IMDb": null,
-            "id_MaoYan": 374213,
-            "id_DouBan": 3292755,
-            "id_ShiGuang": 45831
         }
     },
     {
@@ -32087,17 +30888,6 @@
         }
     },
     {
-        "title": "红色娘子军",
-        "profession_films_boxoffice": "50",
-        "ids": {
-            "title": "红色娘子军",
-            "id_IMDb": null,
-            "id_MaoYan": 240068,
-            "id_DouBan": 3586998,
-            "id_ShiGuang": 28892
-        }
-    },
-    {
         "title": "天之书",
         "profession_films_boxoffice": "137.7万",
         "ids": {
@@ -32106,17 +30896,6 @@
             "id_MaoYan": 1358042,
             "id_DouBan": 30482605,
             "id_ShiGuang": 272944
-        }
-    },
-    {
-        "title": "哭笑不得",
-        "profession_films_boxoffice": "82.6万",
-        "ids": {
-            "title": "哭笑不得",
-            "id_IMDb": null,
-            "id_MaoYan": 792,
-            "id_DouBan": 7051307,
-            "id_ShiGuang": 157039
         }
     },
     {
@@ -32362,17 +31141,6 @@
         }
     },
     {
-        "title": "快把我哥带走",
-        "profession_films_boxoffice": "3.75亿",
-        "ids": {
-            "title": "快把我哥带走",
-            "id_IMDb": null,
-            "id_MaoYan": 1216446,
-            "id_DouBan": 27045331,
-            "id_ShiGuang": 255265
-        }
-    },
-    {
         "title": "时尚女郎之女人江湖",
         "profession_films_boxoffice": "2.1万",
         "ids": {
@@ -32428,17 +31196,6 @@
         }
     },
     {
-        "title": "半熟少女",
-        "profession_films_boxoffice": "233.3万",
-        "ids": {
-            "title": "半熟少女",
-            "id_IMDb": null,
-            "id_MaoYan": 345638,
-            "id_DouBan": 26345159,
-            "id_ShiGuang": 231673
-        }
-    },
-    {
         "title": "出山记",
         "profession_films_boxoffice": "593.4万",
         "ids": {
@@ -32480,17 +31237,6 @@
             "id_MaoYan": 384953,
             "id_DouBan": 3632531,
             "id_ShiGuang": 58078
-        }
-    },
-    {
-        "title": "血滴子",
-        "profession_films_boxoffice": "7184.7万",
-        "ids": {
-            "title": "血滴子",
-            "id_IMDb": null,
-            "id_MaoYan": 937,
-            "id_DouBan": 2994851,
-            "id_ShiGuang": 49801
         }
     },
     {
@@ -32546,17 +31292,6 @@
             "id_MaoYan": 1229702,
             "id_DouBan": 30288751,
             "id_ShiGuang": 259344
-        }
-    },
-    {
-        "title": "半边天",
-        "profession_films_boxoffice": "73.7万",
-        "ids": {
-            "title": "半边天",
-            "id_IMDb": null,
-            "id_MaoYan": 1225076,
-            "id_DouBan": 30240344,
-            "id_ShiGuang": 46409
         }
     },
     {
@@ -32634,17 +31369,6 @@
             "id_MaoYan": 58683,
             "id_DouBan": 4305913,
             "id_ShiGuang": 49359
-        }
-    },
-    {
-        "title": "穆桂英挂帅",
-        "profession_films_boxoffice": "47.9万",
-        "ids": {
-            "title": "穆桂英挂帅",
-            "id_IMDb": null,
-            "id_MaoYan": 371838,
-            "id_DouBan": 10438503,
-            "id_ShiGuang": 44504
         }
     },
     {
@@ -32755,17 +31479,6 @@
             "id_MaoYan": 366364,
             "id_DouBan": 25931448,
             "id_ShiGuang": 235823
-        }
-    },
-    {
-        "title": "假戏真作",
-        "profession_films_boxoffice": "4.9万",
-        "ids": {
-            "title": "假戏真作",
-            "id_IMDb": null,
-            "id_MaoYan": 340788,
-            "id_DouBan": 30367874,
-            "id_ShiGuang": 138246
         }
     },
     {
@@ -33162,17 +31875,6 @@
             "id_MaoYan": 1217701,
             "id_DouBan": 26989671,
             "id_ShiGuang": 254787
-        }
-    },
-    {
-        "title": "步步惊心",
-        "profession_films_boxoffice": "3215.7万",
-        "ids": {
-            "title": "步步惊心",
-            "id_IMDb": null,
-            "id_MaoYan": 368325,
-            "id_DouBan": 5384548,
-            "id_ShiGuang": 143372
         }
     },
     {
@@ -33693,17 +32395,6 @@
         }
     },
     {
-        "title": "蓝色档案",
-        "profession_films_boxoffice": "2954",
-        "ids": {
-            "title": "蓝色档案",
-            "id_IMDb": null,
-            "id_MaoYan": 44867,
-            "id_DouBan": 3240788,
-            "id_ShiGuang": 89088
-        }
-    },
-    {
         "title": "极品飞车2",
         "profession_films_boxoffice": "4.11亿",
         "ids": {
@@ -34196,17 +32887,6 @@
             "id_MaoYan": 344558,
             "id_DouBan": 35284443,
             "id_ShiGuang": 271543
-        }
-    },
-    {
-        "title": "巴啦啦小魔仙",
-        "profession_films_boxoffice": "5173.5万",
-        "ids": {
-            "title": "巴啦啦小魔仙",
-            "id_IMDb": null,
-            "id_MaoYan": 1222464,
-            "id_DouBan": 20369263,
-            "id_ShiGuang": 183086
         }
     },
     {
@@ -34966,17 +33646,6 @@
             "id_MaoYan": 1280000,
             "id_DouBan": 33418591,
             "id_ShiGuang": 269290
-        }
-    },
-    {
-        "title": "花木兰",
-        "profession_films_boxoffice": "2.78亿",
-        "ids": {
-            "title": "花木兰",
-            "id_IMDb": null,
-            "id_MaoYan": 1210778,
-            "id_DouBan": 34800544,
-            "id_ShiGuang": 98083
         }
     },
     {
@@ -35959,17 +34628,6 @@
         }
     },
     {
-        "title": "穆桂英挂帅",
-        "profession_films_boxoffice": "47.9万",
-        "ids": {
-            "title": "穆桂英挂帅",
-            "id_IMDb": null,
-            "id_MaoYan": 371838,
-            "id_DouBan": 10438503,
-            "id_ShiGuang": 44504
-        }
-    },
-    {
         "title": "大秦直道",
         "profession_films_boxoffice": "17.4万",
         "ids": {
@@ -36066,17 +34724,6 @@
             "id_MaoYan": 123,
             "id_DouBan": 35358415,
             "id_ShiGuang": 130383
-        }
-    },
-    {
-        "title": "美人鱼",
-        "profession_films_boxoffice": "33.91亿",
-        "ids": {
-            "title": "美人鱼",
-            "id_IMDb": null,
-            "id_MaoYan": 246063,
-            "id_DouBan": 35588323,
-            "id_ShiGuang": 209007
         }
     },
     {
@@ -36619,17 +35266,6 @@
         }
     },
     {
-        "title": "上海上海",
-        "profession_films_boxoffice": "1.23亿",
-        "ids": {
-            "title": "上海上海",
-            "id_IMDb": null,
-            "id_MaoYan": 373178,
-            "id_DouBan": 3920718,
-            "id_ShiGuang": 106944
-        }
-    },
-    {
         "title": "横山游击队",
         "profession_films_boxoffice": "3.4万",
         "ids": {
@@ -36759,17 +35395,6 @@
             "id_MaoYan": 377452,
             "id_DouBan": 10535482,
             "id_ShiGuang": 171423
-        }
-    },
-    {
-        "title": "霍元甲",
-        "profession_films_boxoffice": "1.05亿",
-        "ids": {
-            "title": "霍元甲",
-            "id_IMDb": null,
-            "id_MaoYan": 599,
-            "id_DouBan": 34858549,
-            "id_ShiGuang": 56347
         }
     },
     {
@@ -36905,17 +35530,6 @@
         }
     },
     {
-        "title": "101次求婚",
-        "profession_films_boxoffice": "1.99亿",
-        "ids": {
-            "title": "101次求婚",
-            "id_IMDb": null,
-            "id_MaoYan": 78010,
-            "id_DouBan": 5319835,
-            "id_ShiGuang": 132471
-        }
-    },
-    {
         "title": "回头是远方",
         "profession_films_boxoffice": "498.5万",
         "ids": {
@@ -36957,17 +35571,6 @@
             "id_MaoYan": 271065,
             "id_DouBan": 4281708,
             "id_ShiGuang": 52661
-        }
-    },
-    {
-        "title": "爱情呼叫转移",
-        "profession_films_boxoffice": "1241.0万",
-        "ids": {
-            "title": "爱情呼叫转移",
-            "id_IMDb": null,
-            "id_MaoYan": 275,
-            "id_DouBan": 1927686,
-            "id_ShiGuang": 48359
         }
     },
     {
@@ -37089,17 +35692,6 @@
             "id_MaoYan": 1322133,
             "id_DouBan": 34943487,
             "id_ShiGuang": 266860
-        }
-    },
-    {
-        "title": "人到中年",
-        "profession_films_boxoffice": "83",
-        "ids": {
-            "title": "人到中年",
-            "id_IMDb": null,
-            "id_MaoYan": 212052,
-            "id_DouBan": 4004939,
-            "id_ShiGuang": 28901
         }
     },
     {
@@ -37312,17 +35904,6 @@
         }
     },
     {
-        "title": "上海往事",
-        "profession_films_boxoffice": "3.7万",
-        "ids": {
-            "title": "上海往事",
-            "id_IMDb": null,
-            "id_MaoYan": 372172,
-            "id_DouBan": 4826791,
-            "id_ShiGuang": 70112
-        }
-    },
-    {
         "title": "天下第一丑",
         "profession_films_boxoffice": "49.9万",
         "ids": {
@@ -37433,17 +36014,6 @@
         }
     },
     {
-        "title": "龙门飞甲",
-        "profession_films_boxoffice": "5.39亿",
-        "ids": {
-            "title": "龙门飞甲",
-            "id_IMDb": null,
-            "id_MaoYan": 27,
-            "id_DouBan": 25757866,
-            "id_ShiGuang": 127800
-        }
-    },
-    {
         "title": "歌带你回家",
         "profession_films_boxoffice": "331.5万",
         "ids": {
@@ -37543,17 +36113,6 @@
         }
     },
     {
-        "title": "一诺千金",
-        "profession_films_boxoffice": "11.6万",
-        "ids": {
-            "title": "一诺千金",
-            "id_IMDb": null,
-            "id_MaoYan": 6598,
-            "id_DouBan": 19923384,
-            "id_ShiGuang": 52733
-        }
-    },
-    {
         "title": "再见时光",
         "profession_films_boxoffice": "13.0万",
         "ids": {
@@ -37620,17 +36179,6 @@
         }
     },
     {
-        "title": "祥林嫂",
-        "profession_films_boxoffice": "2436",
-        "ids": {
-            "title": "祥林嫂",
-            "id_IMDb": null,
-            "id_MaoYan": 68182,
-            "id_DouBan": 5985922,
-            "id_ShiGuang": 44347
-        }
-    },
-    {
         "title": "慈善玩家",
         "profession_films_boxoffice": "3.5万",
         "ids": {
@@ -37661,17 +36209,6 @@
             "id_MaoYan": 32179,
             "id_DouBan": 2224949,
             "id_ShiGuang": 49021
-        }
-    },
-    {
-        "title": "西厢记",
-        "profession_films_boxoffice": "5.0万",
-        "ids": {
-            "title": "西厢记",
-            "id_IMDb": null,
-            "id_MaoYan": 250420,
-            "id_DouBan": 26658570,
-            "id_ShiGuang": 44316
         }
     },
     {
@@ -37741,17 +36278,6 @@
         }
     },
     {
-        "title": "赏金猎人",
-        "profession_films_boxoffice": "2.13亿",
-        "ids": {
-            "title": "赏金猎人",
-            "id_IMDb": null,
-            "id_MaoYan": 338506,
-            "id_DouBan": 21941770,
-            "id_ShiGuang": 225568
-        }
-    },
-    {
         "title": "城市之光",
         "profession_films_boxoffice": "2.24亿",
         "ids": {
@@ -37804,17 +36330,6 @@
             "id_MaoYan": 1243427,
             "id_DouBan": 4290412,
             "id_ShiGuang": 52259
-        }
-    },
-    {
-        "title": "毒中毒",
-        "profession_films_boxoffice": "19.4万",
-        "ids": {
-            "title": "毒中毒",
-            "id_IMDb": null,
-            "id_MaoYan": 368290,
-            "id_DouBan": 26803692,
-            "id_ShiGuang": 86508
         }
     },
     {
@@ -37928,17 +36443,6 @@
         }
     },
     {
-        "title": "铁扇公主",
-        "profession_films_boxoffice": "1.86亿",
-        "ids": {
-            "title": "铁扇公主",
-            "id_IMDb": null,
-            "id_MaoYan": 239973,
-            "id_DouBan": 1466022,
-            "id_ShiGuang": 37627
-        }
-    },
-    {
         "title": "星星之火",
         "profession_films_boxoffice": "4.1万",
         "ids": {
@@ -37958,28 +36462,6 @@
             "id_MaoYan": 2966042,
             "id_DouBan": 26412140,
             "id_ShiGuang": 47223
-        }
-    },
-    {
-        "title": "红孩儿",
-        "profession_films_boxoffice": "250.0万",
-        "ids": {
-            "title": "红孩儿",
-            "id_IMDb": null,
-            "id_MaoYan": 379885,
-            "id_DouBan": 3048028,
-            "id_ShiGuang": 47245
-        }
-    },
-    {
-        "title": "捉迷藏",
-        "profession_films_boxoffice": "7138.8万",
-        "ids": {
-            "title": "捉迷藏",
-            "id_IMDb": null,
-            "id_MaoYan": 346299,
-            "id_DouBan": 35521746,
-            "id_ShiGuang": 232865
         }
     },
     {
@@ -38090,17 +36572,6 @@
             "id_MaoYan": 1300533,
             "id_DouBan": 34834769,
             "id_ShiGuang": 266123
-        }
-    },
-    {
-        "title": "地道战",
-        "profession_films_boxoffice": "3",
-        "ids": {
-            "title": "地道战",
-            "id_IMDb": null,
-            "id_MaoYan": 820,
-            "id_DouBan": 5343604,
-            "id_ShiGuang": 15541
         }
     },
     {
