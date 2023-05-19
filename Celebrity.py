@@ -22,14 +22,13 @@ class Celebrity:
         self.nominations_times = None
     
     def clawler_action(self):
-        self.id = {
-            # "猫眼": self.id,
-            "艾曼": AiMan.get_celebrity_id_by_name(self.name),
-            "时光": ShiGuang.get_celebrity_id_by_name(self.name),
+        
+        award_times, nominations_times = MaoYan.get_celebrity_nomination_award_times(self.id["猫眼"])
+        self.MaoYan["获奖"] = {
+            "获奖详情": MaoYan.get_celebrity_awards(self.id["猫眼"]),
+            "获奖次数": award_times,
+            "提名次数": nominations_times
         }
-
-        self.award_times, self.nominations_times = MaoYan.get_celebrity_nomination_award_times(self.id)
-        self.awards = MaoYan.get_celebrity_awards(self.id)
 
 
     def _to_dict(self):
