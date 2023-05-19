@@ -1,6 +1,5 @@
 __pycache__
 Clawler/__pycache__
-data/*.json
 data/authors/*.json
 data/works/*.json
 metadata/merged/*.json
