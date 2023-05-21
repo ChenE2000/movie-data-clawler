@@ -50,9 +50,9 @@ def generate_movie_todo_list_by_redis() -> typing.List[Movie]:
     return todos            
     
     
-def generate_celebrity_todo_list() -> typing.List[Movie]:
+def generate_celebrity_name():
     """ 生成演员待爬取列表 """
-    path = "./all.json"
+    path = "./metadata/all.json"
     with open(path, "r", encoding="utf-8") as f:
         movies = json.load(f)
         celebrities = []
@@ -65,9 +65,23 @@ def generate_celebrity_todo_list() -> typing.List[Movie]:
                 celebrities += movie['豆瓣']['基础信息']['主演']
     
     deduped = list(set(celebrities))
-    print("Total celebrities to crawl: ", len(deduped))
-    return deduped
+    c_l = []
+    # add incremental id to each celebrity
+    for i, celebrity in enumerate(deduped):
+        c_l.append({
+            "uid": i,
+            "name": celebrity
+        })
+        
+    print("Total celebrities to crawl: ", len(c_l))
+    return c_l
 
 
-def generate_celebrity_todo_list_by_redis() -> typing.List[Celebrity]:
-    pass
+def generate_celebrity_todo_list_by_redis():
+    keys = db_ctx.get_all_keys()
+    with open("./metadata/celebrity_name.json", "r", encoding="utf-8") as f:
+        celebrities = json.load(f)
+        
+        todo = list(filter(lambda x: x["uid"] not in keys, celebrities))
+        print("Total celebrities to crawl: ", len(todo))
+    return todo

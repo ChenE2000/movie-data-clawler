@@ -9,45 +9,97 @@ from tools.TencentOCR import ocr
 from tools.TitleFormatter import find_closest_match
 
 
-def get_celebrity_boxoffice(cid) -> float:
-    url = f"https://www.maoyan.com/films/celebrity/{cid}"
+def get_celebrity_id_by_name(name) -> int:
+    url = f"https://www.maoyan.com/query?kw={name}&type=1"
     driver = webDriver
     driver.get(url)
     time.sleep(2)
-    # find boxoffice class="cele-index sumBox"
-    p_s = driver.find_elements(By.CLASS_NAME, "stonefont")
-    # p_s 第一个是粉丝数，第二个是总票房
-    # save p_s[1] as base64
-    base_64 = p_s[1].screenshot_as_base64
-    boxoffice = float(ocr(base_64)[0]['DetectedText'])
-    print(boxoffice)
-    return boxoffice
+    
+    # div with class="celebrity-list"
+    if len(driver.find_elements(By.CLASS_NAME, "celebrity-list")) == 0:
+        print("No such celebrity")
+        return -1
+    celebrity_list = driver.find_element(By.CLASS_NAME, "celebrity-list")
+    # find all li 
+    li_s = celebrity_list.find_elements(By.TAG_NAME, "li")
+    if len(li_s) == 0:
+        print("No such celebrity")
+        return -1
+    
+    # get the first item
+    li = li_s[0]
+    name_div = li.find_element(By.CLASS_NAME, "item-title")
+    
+    if name_div.text != name:
+        print("No such celebrity")
+        return -1
+    
+    cid = name_div.find_element(By.TAG_NAME, "a").get_attribute('href').split("/")[-1]
+    return (cid)
+    
 
-
-def get_celebrity_nomination_award_times(cid) -> tuple:
-    """ 
-    get celebrity nomination and award times
-    return: award_times, nominations_times
-    """
-    url = f"https://www.maoyan.com/films/celebrity/{cid}"
-    driver = webDriver
-    driver.get(url)
-    time.sleep(2)
-    # find nomination times class="about-num"
-    spans = driver.find_elements(By.CLASS_NAME, "about-num")
-    spec = spans[-1].text
-    # （共2次获奖，2次提名）
-    spec = spec.replace("（共", "").replace("次获奖，", ",").replace("次提名）", "")
-    award_times, nominations_times = spec.split(",")
-
-    return {
-        "获奖次数": int(award_times),
-        "提名次数": int(nominations_times)
+def get_celebrity_boxoffice(cid) -> str:
+    unit_map = {
+        "万": 10000,
+        "亿": 100000000
     }
+    
+    url = f"https://www.maoyan.com/films/celebrity/{cid}"
+    print('[猫眼] 爬取票房信息')
+    driver = webDriver
+    driver.get(url)
+    time.sleep(4)
+
+    # find xpath /html/body/div[3]/div/div[2]/div[4]/div[2]/p[2]
+    if len(driver.find_elements(By.XPATH, "/html/body/div[3]/div/div[2]/div[4]/div[2]/p[2]")) == 0:
+        print('[猫眼] 无票房信息')
+        return -1
+    boxoffice = driver.find_element(By.XPATH, "/html/body/div[3]/div/div[2]/div[4]/div[2]/p[2]")
+    if len(boxoffice.find_elements(By.CLASS_NAME, "stonefont")) == 0:
+        print('[猫眼] 无票房信息')
+        return -1
+    figure = boxoffice.find_element(By.CLASS_NAME, "stonefont")
+    unit = boxoffice.find_element(By.CLASS_NAME, "unit").text
+    # save p_s[1] as base64
+    base_64 = figure.screenshot_as_base64
+    # save as png
+    # figure.screenshot("figure.png")
+    
+    # save base64
+    # with open("figure_base64.txt", "w") as f:
+    #     f.write(base_64)
+    
+    result = ocr(base_64)[0]['DetectedText']
+    result = float(result) * unit_map[unit]
+    print(f"[猫眼] 票房信息: {result}")
+    return result
+
+
+# def get_celebrity_nomination_award_times(cid) -> tuple:
+#     """ 
+#     get celebrity nomination and award times
+#     return: award_times, nominations_times
+#     """
+#     url = f"https://www.maoyan.com/films/celebrity/{cid}"
+#     driver = webDriver
+#     driver.get(url)
+#     time.sleep(2)
+#     # find nomination times class="about-num"
+#     spans = driver.find_elements(By.CLASS_NAME, "about-num")
+#     spec = spans[-1].text
+#     # （共2次获奖，2次提名）
+#     spec = spec.replace("（共", "").replace("次获奖，", ",").replace("次提名）", "")
+#     award_times, nominations_times = spec.split(",")
+
+#     return {
+#         "获奖次数": int(award_times),
+#         "提名次数": int(nominations_times)
+#     }
 
 def get_celebrity_awards(cid) -> list:
     driver = webDriver
     url = f"https://www.maoyan.com/films/celebrity/{cid}"
+    print('[猫眼] 爬取获奖信息')
     driver.get(url)
     time.sleep(2)
     
@@ -56,6 +108,8 @@ def get_celebrity_awards(cid) -> list:
     time.sleep(5)
     
     # find div with class="award-slider"
+    if len(driver.find_elements(By.CLASS_NAME, "award-slider")) == 0:
+        return []
     award_slider = driver.find_element(By.CLASS_NAME, "award-slider")
     # find all class="item"
     items = award_slider.find_elements(By.CLASS_NAME, "item")
@@ -68,6 +122,7 @@ def get_celebrity_awards(cid) -> list:
     res_list = []
     # 让鼠标悬停在每个item上，使得item显示
     for i in range(len(items)):
+        print(f"[猫眼] 爬取第{i+1}/{len(items)}个获奖信息")
         item, detail = items[i], details[i]
         ActionChains(driver).move_to_element(item).perform()
         time.sleep(0.5)

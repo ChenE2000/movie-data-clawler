@@ -1,9 +1,9 @@
 import random
 import time
 import json
-from Clawler.DouBan import get_movie_id_by_title as get_movie_id_by_title_DouBan
-from Clawler.MaoYan import get_movie_id_by_title as get_movie_id_by_title_MaoYan
-from Clawler.Infrastructure import generate_movie_titles_todo_list, generate_movie_todo_list_by_redis
+import Clawler.DouBan as DouBan
+import Clawler.MaoYan as MaoYan
+from Clawler.Infrastructure import generate_movie_titles_todo_list, generate_movie_todo_list_by_redis, generate_celebrity_name, generate_celebrity_todo_list_by_redis
 
 from DB.Context import redisDB as db_ctx
 
@@ -14,13 +14,13 @@ def get_all_movies_id():
         movie_titles_todo_list = generate_movie_titles_todo_list()
         movie = random.choice(movie_titles_todo_list)
         print("get ids from sites:", movie.title)
-        movie.id_DouBan = get_movie_id_by_title_DouBan(movie.title)
-        movie.id_MaoYan = get_movie_id_by_title_MaoYan(movie.title)
+        movie.id_DouBan = DouBan.get_movie_id_by_title(movie.title)
+        movie.id_MaoYan = MaoYan.get_movie_id_by_title(movie.title)
         movie.save_to_json()
         time.sleep(1)
 
 
-def main():
+def movies():
     todos = generate_movie_todo_list_by_redis()
     print("剩余任务:", len(todos))
     
@@ -28,6 +28,7 @@ def main():
         time.sleep(1)
         movie = random.choice(todos)
         if db_ctx.exist(movie.id_DouBan):
+            print(f"已爬取<{movie.title}>, 跳过")
             todos.remove(movie)
         else:
             try:
@@ -36,10 +37,42 @@ def main():
                 db_ctx.set(str(movie.id_DouBan), json.dumps(data, ensure_ascii=False))
             except Exception as e:
                 print(f"[ERROR] {e}")
-                time.sleep(2)
+                # time.sleep(2)
+                continue
+            
+def celebrity():
+    # with open("./metadata/celebrity_name.json", "r", encoding="utf-8") as f:
+    todo = generate_celebrity_todo_list_by_redis()[::-1]
+    
+    for item in todo:
+        time.sleep(2)
+        print("正在爬取:", item['name'])
+        if db_ctx.exist(item['uid']):
+            print(f"已爬取<{item['name']}>, 跳过")
+            continue
+        else:
+            try:
+                cid = MaoYan.get_celebrity_id_by_name(item['name'])
+                if cid == -1:
+                    db_ctx.set(str(item['uid']), json.dumps({"姓名": item['name'], "uid": item['uid'], "exist":False}, ensure_ascii=False))
+                    continue
+                data = {
+                    "姓名": item['name'],
+                    "uid": item['uid'],
+                    "总票房": MaoYan.get_celebrity_boxoffice(cid),
+                    "获奖详情": MaoYan.get_celebrity_awards(cid),
+                }
+                # print(data)
+                db_ctx.set(str(item['uid']), json.dumps(data, ensure_ascii=False))
+                # save to json
+                # with open(f"./data/celebrity/{item['name']}.json", "w", encoding="utf-8") as f:
+                #     f.write(json.dumps(data, ensure_ascii=False, indent=4))
+            except Exception as e:
+                print(f"[ERROR] {e}")
+                # time.sleep(2)
                 continue
 
 if __name__ == "__main__":
     print("Start crawling")
-    main()
+    celebrity()
     

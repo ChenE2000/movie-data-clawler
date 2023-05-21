@@ -11,14 +11,15 @@ from api_keys import tencent_ocr_secret_id as secret_id, tencent_ocr_secret_key 
 
 def ocr(image_base64):
     try:
+        print("[OCR] 提取中...")
         cred = credential.Credential(secret_id, secret_key)
         client = ocr_client.OcrClient(cred, "ap-shanghai")
         # 实例化一个请求对象,每个接口都会对应一个request对象
         req = models.GeneralBasicOCRRequest()
         params = {
-            "ImageBase64": image_base64  # "ImageUrl": None,
+            "ImageBase64": image_base64,  # "ImageUrl": None,
             # "Scene": None,
-            # "LanguageType": None,
+            # "LanguageType": "zh_rare",
             # "IsPdf": False,
             # "PdfPageNumber": None,
             # "IsWords": False
@@ -29,6 +30,7 @@ def ocr(image_base64):
         resp = client.GeneralBasicOCR(req)
         # 输出json格式的字符串回包
         obj = json.loads(resp.to_json_string())
+        # print(obj)
         return obj['TextDetections']
 
     except TencentCloudSDKException as err:
