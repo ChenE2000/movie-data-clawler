@@ -40,9 +40,9 @@ def movies():
                 # time.sleep(2)
                 continue
             
+            
 def celebrity():
-    # with open("./metadata/celebrity_name.json", "r", encoding="utf-8") as f:
-    todo = generate_celebrity_todo_list_by_redis()[::-1]
+    todo = generate_celebrity_todo_list_by_redis()
     
     for item in todo:
         time.sleep(2)
@@ -62,14 +62,9 @@ def celebrity():
                     "总票房": MaoYan.get_celebrity_boxoffice(cid),
                     "获奖详情": MaoYan.get_celebrity_awards(cid),
                 }
-                # print(data)
                 db_ctx.set(str(item['uid']), json.dumps(data, ensure_ascii=False))
-                # save to json
-                # with open(f"./data/celebrity/{item['name']}.json", "w", encoding="utf-8") as f:
-                #     f.write(json.dumps(data, ensure_ascii=False, indent=4))
             except Exception as e:
                 print(f"[ERROR] {e}")
-                # time.sleep(2)
                 continue
 
 if __name__ == "__main__":

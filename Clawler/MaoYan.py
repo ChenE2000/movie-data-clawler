@@ -1,5 +1,4 @@
 import time
-
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support.ui import WebDriverWait
@@ -62,14 +61,8 @@ def get_celebrity_boxoffice(cid) -> str:
     unit = boxoffice.find_element(By.CLASS_NAME, "unit").text
     # save p_s[1] as base64
     base_64 = figure.screenshot_as_base64
-    # save as png
-    # figure.screenshot("figure.png")
     
-    # save base64
-    # with open("figure_base64.txt", "w") as f:
-    #     f.write(base_64)
-    
-    result = ocr(base_64)[0]['DetectedText']
+    result = ocr(base_64)[0]['DetectedText'].replace(" ", "")
     result = float(result) * unit_map[unit]
     print(f"[猫眼] 票房信息: {result}")
     return result

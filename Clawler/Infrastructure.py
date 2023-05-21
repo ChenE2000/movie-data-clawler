@@ -1,5 +1,6 @@
 import os
 import json
+import random
 import typing
 from Movie import Movie
 from Celebrity import Celebrity
@@ -84,4 +85,6 @@ def generate_celebrity_todo_list_by_redis():
         
         todo = list(filter(lambda x: x["uid"] not in keys, celebrities))
         print("Total celebrities to crawl: ", len(todo))
+    # ramdomly shuffle
+    random.shuffle(todo)
     return todo
