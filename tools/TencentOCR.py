@@ -17,7 +17,7 @@ def ocr(image_base64):
         cred = credential.Credential(secret_id, secret_key)
         client = ocr_client.OcrClient(cred, "ap-shanghai")
         # 实例化一个请求对象,每个接口都会对应一个request对象
-        req = models.GeneralEfficientOCRRequest()
+        req = models.GeneralFastOCRRequest()
         params = {
             "ImageBase64": image_base64,  # "ImageUrl": None,
             # "Scene": None,
@@ -29,7 +29,7 @@ def ocr(image_base64):
         req.from_json_string(json.dumps(params))
 
         # 返回的resp是一个GeneralBasicOCRResponse的实例，与请求对象对应
-        resp = client.GeneralEfficientOCR(req)
+        resp = client.GeneralFastOCR(req)
         # 输出json格式的字符串回包
         obj = json.loads(resp.to_json_string())
         return obj['TextDetections']

@@ -94,11 +94,11 @@ def get_celebrity_awards(cid) -> list:
     url = f"https://www.maoyan.com/films/celebrity/{cid}"
     print('[猫眼] 爬取获奖信息')
     driver.get(url)
-    time.sleep(2)
+    time.sleep(0.5)
     
     # go to the bottom of the page
     driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-    time.sleep(5)
+    time.sleep(2)
     
     # find div with class="award-slider"
     if len(driver.find_elements(By.CLASS_NAME, "award-slider")) == 0:
@@ -118,7 +118,7 @@ def get_celebrity_awards(cid) -> list:
         print(f"[猫眼] 爬取第{i+1}/{len(items)}个获奖信息")
         item, detail = items[i], details[i]
         ActionChains(driver).move_to_element(item).perform()
-        time.sleep(0.5)
+        time.sleep(0.4)
         award_cover = item.find_element(By.TAG_NAME, "img").get_attribute(name="src")
         award_info = item.find_elements(By.TAG_NAME, "p")
         item_basic_info = {
