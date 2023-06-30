@@ -2,6 +2,8 @@ __pycache__
 Clawler/__pycache__
 data/authors/*.json
 data/works/*.json
+data/baidu_feed_index/*.json
+data/baidu_search_index/*.json
 metadata/merged/*.json
 images
 .idea

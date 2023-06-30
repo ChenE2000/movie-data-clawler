@@ -4,3 +4,5 @@ tencentcloud-sdk-python
 BeautifulSoup4
 requests
 redis
+pillow
+numpy
